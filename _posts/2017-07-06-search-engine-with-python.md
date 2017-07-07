@@ -12,9 +12,10 @@ I assume that you know basics of python, otherwise you can brush-up your skill [
 
 # Finding your data
 
-For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go ahead and browse it. If you right click on the page, one of the option you see "view page source" and when you click on that what you see is source code.
+For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go ahead and browse it. If you right click on the page, one of the option you see "view page source" and when you click on that what you see is source code. What is important for us is link,here's a example of links
 
-![alt text](/img/link.png "screenshot")
+![alt text](/img/link.png "xkcd page source")
+So, links start with \*<a\* tag
 
 
 
