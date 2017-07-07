@@ -14,7 +14,7 @@ I assume that you know basics of python, otherwise you can brush-up your skill [
 
 For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go ahead and browse it. If you right click on the page, one of the option you see "view page source" and when you click on that what you see is source code.
 
-![alt text](https://github.com/summii/summii.github.io/blob/master/img/link.png "screenshot")
+![alt text](/img/link.png "screenshot")
 
 
 
