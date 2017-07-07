@@ -20,7 +20,8 @@ For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go a
 Our goal is to take the text that came back from a web request, find link in that text, which is gonna be tag that start with *<a href=\"\<url\>\"*(Not all web pages have the same structure) and then extract from that tag the url of the web page that it links to. So those are *URLS*  we're going to use in our crawler to make progress. 
 
 ### Our first function - getting the link
-```page = content of the web page as a string
+```python
+   page = content of the web page as a string
    def get_next_url(page):
      start_link = page.find('<a href=') #find <a href=" tag
      start_quote = page.find('"', start_link) 
