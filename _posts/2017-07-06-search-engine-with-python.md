@@ -16,7 +16,8 @@ For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go a
 
 ![alt text](/img/link.png "xkcd page source")
 
-So, links start with \*<a\* tag
+# Planning your code
+Our goal is to take the text that came back from a web request, find link in that text, which is gonna be tag that start with *<a href="<url>"*(Not all web pages have the same structure) and then extract from that tag the url of the web page that it links to. So those are *URLS*  we're going to use in our crawler to make progress.
 
 
 
