@@ -26,7 +26,8 @@ def get_next_url(page):
     start_quote = page.find('"', start_link) 
     end_quote = page.find('"', start_quote + 1)
     url = page[start_quote + 1:end_quote]
-    return url, end_quote```
+    return url, end_quote
+```
     
  So we'are gonna assume that we start with a page content in a variable *page*(We'll see how we got the page content in next tutorial). Now we'll extract our first link from that tag and we can do this using find method. What we want to do is find in search string page the target link(<a href).
 
