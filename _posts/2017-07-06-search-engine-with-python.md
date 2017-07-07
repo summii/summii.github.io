@@ -11,6 +11,8 @@ We're going to use python 2.7.If you don't have python 2.7, you need to download
 I assume that you know basics of python, otherwise you can brush-up your skill [here]("https://docs.python.org/2/tutorial/index.html"). 
 
 #Finding your data
+For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go ahead and browse it. If you right click on the page, one of the option you see "view page source" and when you click on that what you see is source code.
+
 ![alt text](https://github.com/summii/summii.github.io/blob/master/img/link.png "screenshot")
 
 
