@@ -60,12 +60,13 @@ page = get_all_links("this is a <href="test url" and we can add two more urls <a
 ```
  
  Define a procedure **get_all_links** that will print all links from the page.
- 	1. We will while loop to keep going until we find all links
-	2. Assigning return values from **get_next_target**
-	3. We have if url, and if that's true, that means we found a valid url
-	4. Print urls
-	5. Advance the page to next position
-	6. Finish it by using break, if we didn't get valid url, there are no more links to extract 
+ 
+     1. We will while loop to keep going until we find all links
+     2. Assigning return values from **get_next_target**
+     3. We have if url, and if that's true, that means we found a valid url
+     4. Print urls
+     5. Advance the page to next position
+     6. Finish it by using break, if we didn't get valid url, there are no more links to extract 
 	
 I've put a final example script in this [gist](https://gist.github.com/summii/1c3604de48fc8a841c3a8987bb38798a). If you have any question, feel free to mail me.
 
