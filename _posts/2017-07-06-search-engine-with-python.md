@@ -41,7 +41,7 @@ So we'are gonna assume that we start with a page content in a variable *page*(We
 
 ### Our second function - Getting all links
 
-Now that we have our first link, we'd better start going through all text to get our all links. We need to loop through the all page source and find <a href= tag to extract all links.
+Now that we have our first link, we'd better start going through all text to get our all links. We need to loop through the all page source and find ###### <a href= tag to extract all links.
 
 Let's write some to get all of them:
 
