@@ -34,7 +34,7 @@ Hopefully this code is relatively easy to follow, but if not, here's what we're 
 
 So we'are gonna assume that we start with a page content in a variable *page*(We'll see how we got the page content in next tutorial). Now we'll extract our first link from that tag and we can do this using find method. What we want to do is find in search string page the target link(<a href) and this will give the value of number, which is position where the first link is found on the page.
 
-    1. Find the <a href= tag and store it in variable *start_link*
+    1. Find the <a href= tag and store it in variable "start_link"
     2. Initialize the variable start_quote which will find the start quote(") after the *start_link* value.
     3. Initialize the variable *end_quote* and to find the *end_quote* we need to look after the start_quote+1.
     4. Initialize the variable url to the string we find between **start_quote** and *end_quote*
@@ -62,7 +62,7 @@ page = get_all_links("this is a <href="test url" and we can add two more urls <a
  Define a procedure **get_all_links** that will print all links from the page.
  
      1. We will while loop to keep going until we find all links
-     2. Assigning return values from **get_next_target**
+     2. Assigning return values from "get_next_target"
      3. We have if url, and if that's true, that means we found a valid url
      4. Print urls
      5. Advance the page to next position
