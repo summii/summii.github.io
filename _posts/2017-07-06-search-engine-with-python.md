@@ -17,7 +17,7 @@ For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go a
 ![alt text](/img/link.png "xkcd page source")
 
 ## Planning your code
-Our goal is to take the text that came back from a web request, find link in that text, which is gonna be tag that start with *<a href=\"\<url\>\"*(Not all web pages have the same structure) and then extract from that tag the url of the web page that it links to. So those are *URLS*  we're going to use in our crawler to make progress. 
+Our goal is to take the text that came back from a web request, find link in that text, which is gonna be tag that start with *<a href=\"\<url\>\"*(Not all web pages have the same structure) and then extract from that tag the url of the web page that it links to. So those are **URLS**  we're going to use in our crawler to make progress. 
 
 ### Our first function - getting the link
 ```python
@@ -34,11 +34,11 @@ Hopefully this code is relatively easy to follow, but if not, here's what we're 
 
 So we'are gonna assume that we start with a page content in a variable *page*(We'll see how we got the page content in next tutorial). Now we'll extract our first link from that tag and we can do this using find method. What we want to do is find in search string page the target link(<a href) and this will give the value of number, which is position where the first link is found on the page.
 
-    1. Find the <a href= tag and store it in variable **start_link**
-    2. Initialize the variable start_quote which will find the start quote(") after the **start_link** value.
-    3. Initialize the variable **end_quote** and to find the **end_quote** we need to look after the start_quote+1.
-    4. Initialize the variable url to the string we find between **start_quote** and **end_quote**
-    5. return the **url**** and end_quote**
+    1. Find the <a href= tag and store it in variable *start_link*
+    2. Initialize the variable start_quote which will find the start quote(") after the *start_link* value.
+    3. Initialize the variable *end_quote* and to find the *end_quote* we need to look after the start_quote+1.
+    4. Initialize the variable url to the string we find between **start_quote** and *end_quote*
+    5. return the *url* and *end_quote*
 
 ### Our second function - Getting all links
 
