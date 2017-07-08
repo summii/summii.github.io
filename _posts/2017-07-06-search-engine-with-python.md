@@ -56,7 +56,7 @@ def get_all_links(page):
 			break
 
 page = get_all_links("this is a <href="test url" and we can add two more urls <a href="test url2", <a href="test url3".")
- ```
+```
  
  Define a procedure **get_all_links** that will print all links from the page.
  	1. We will while loop to keep going until we find all links
