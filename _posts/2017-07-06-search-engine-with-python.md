@@ -37,7 +37,7 @@ So we'are gonna assume that we start with a page content in a variable *page*(We
     1. Find the <a href= tag and store it in variable "start_link"
     2. Initialize the variable start_quote which will find the start quote(") after the "start_link" value.
     3. Initialize the variable "end_quote" and to find the "end_quote" we need to look after the start_quote+1.
-    4. Initialize the variable url to the string we find between **start_quote** and "end_quote"
+    4. Initialize the variable url to the string we find between "start_quote" and "end_quote"
     5. return the "url" and "end_quote"
 
 ### Our second function - Getting all links
