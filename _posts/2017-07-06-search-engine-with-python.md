@@ -33,13 +33,31 @@ Our goal is to take the text that came back from a web request, find link in tha
 Hopefully this code is relatively easy to follow, but if not, here's what we're doing:
 
 So we'are gonna assume that we start with a page content in a variable *page*(We'll see how we got the page content in next tutorial). Now we'll extract our first link from that tag and we can do this using find method. What we want to do is find in search string page the target link(<a href) and this will give the value of number, which is position where the first link is found on the page.
- 1. Find the <a href= tag and store it in variable start_link
- 2. Initialize the variable start_quote which will find the start quote(") after the start_link value.
- 3. Initialize the variable end_quote and to find the end_quote we need to look after the start_quote+1.
- 4. Initialize the variable url to the string we find between start_quote and end_quote
- 5. return the url and end_quote
+   1. Find the <a href= tag and store it in variable start_link
+   2. Initialize the variable start_quote which will find the start quote(") after the start_link value.
+   3. Initialize the variable end_quote and to find the end_quote we need to look after the start_quote+1.
+   4. Initialize the variable url to the string we find between start_quote and end_quote
+   5. return the url and end_quote
 
+### Our second function - Getting all links
 
+Now that we have our first link, we'd better start going through all text to get our all links. We need to loop through the all page source and find <a href= tag to extract all links.
+
+Let's write some to get all of them:
+
+```python
+def get_all_links(page):
+	links = []
+	while True:
+		url, endpos = get_next_target(page)
+		if url:
+			links.append(url)
+			page= page[endpos:]
+		else:
+			break
+
+	return links
+ ```
 
 
 .......................in process
