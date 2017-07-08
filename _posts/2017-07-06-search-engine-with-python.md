@@ -33,31 +33,38 @@ Our goal is to take the text that came back from a web request, find link in tha
 Hopefully this code is relatively easy to follow, but if not, here's what we're doing:
 
 So we'are gonna assume that we start with a page content in a variable *page*(We'll see how we got the page content in next tutorial). Now we'll extract our first link from that tag and we can do this using find method. What we want to do is find in search string page the target link(<a href) and this will give the value of number, which is position where the first link is found on the page.
-   1. Find the <a href= tag and store it in variable start_link
-   2. Initialize the variable start_quote which will find the start quote(") after the start_link value.
-   3. Initialize the variable end_quote and to find the end_quote we need to look after the start_quote+1.
-   4. Initialize the variable url to the string we find between start_quote and end_quote
-   5. return the url and end_quote
+   1. Find the <a href= tag and store it in variable **start_link**
+   2. Initialize the variable start_quote which will find the start quote(") after the **start_link** value.
+   3. Initialize the variable **end_quote** and to find the **end_quote** we need to look after the start_quote+1.
+   4. Initialize the variable url to the string we find between **start_quote** and **end_quote**
+   5. return the **url**** and end_quote**
 
 ### Our second function - Getting all links
 
-Now that we have our first link, we'd better start going through all text to get our all links. We need to loop through the all page source and find ###### <a href= tag to extract all links.
+Now that we have our first link, we'd better start going through all text to get our all links. We need to loop through the all page source and find **<a href=** tag to extract all links.
 
 Let's write some to get all of them:
 
 ```python
 def get_all_links(page):
-	links = []
 	while True:
 		url, endpos = get_next_target(page)
 		if url:
-			links.append(url)
+			print url
 			page= page[endpos:]
 		else:
 			break
 
-	return links
+page = get_all_links("this is a <href="test url" and we can add two more urls <a href="test url2", <a href="test url3".")
  ```
+ 
+ Define a procedure **get_all_links** that will print all links from the page.
+ 	1. We will while loop to keep going until we find all links
+	2. Assigning return values from **get_next_target**
+	3. We have if url, and if that's true, that means we found a valid url
+	4. Print urls
+	5. Advance the page to next position
+	6. Finish it by using break, if we didn't get valid url, there are no more links to extract 
+	
+I've put a final example script in this [gist](https://gist.github.com/summii/1c3604de48fc8a841c3a8987bb38798a). If you have any question, feel free to mail me.
 
-
-.......................in process
