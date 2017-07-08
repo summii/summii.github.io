@@ -10,13 +10,13 @@ We're going to use python 2.7.If you don't have python 2.7, you need to download
 
 I assume that you know basics of python, otherwise you can brush-up your skill [here]("https://docs.python.org/2/tutorial/index.html"). 
 
-# Finding your data
+## Finding your data
 
 For this example, we're going to use [xkcd](https://xkcd.com/353/) webpage. Go ahead and browse it. If you right click on the page, one of the option you see "view page source" and when you click on that what you see is source code. What is important for us is link,here's a example of links
 
 ![alt text](/img/link.png "xkcd page source")
 
-# Planning your code
+## Planning your code
 Our goal is to take the text that came back from a web request, find link in that text, which is gonna be tag that start with *<a href=\"\<url\>\"*(Not all web pages have the same structure) and then extract from that tag the url of the web page that it links to. So those are *URLS*  we're going to use in our crawler to make progress. 
 
 ### Our first function - getting the link
@@ -31,6 +31,7 @@ Our goal is to take the text that came back from a web request, find link in tha
 ```
 
 Hopefully this code is relatively easy to follow, but if not, here's what we're doing:
+
 So we'are gonna assume that we start with a page content in a variable *page*(We'll see how we got the page content in next tutorial). Now we'll extract our first link from that tag and we can do this using find method. What we want to do is find in search string page the target link(<a href) and this will give the value of number, which is position where the first link is found on the page.
  1. Find the <a href= tag and store it in variable start_link
  2. Initialize the variable start_quote which will find the start quote(") after the start_link value.
