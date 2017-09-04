@@ -47,4 +47,54 @@ np.full((3,5), 2.3)
 > array([[ 2.3,  2.3,  2.3,  2.3,  2.3],
        [ 2.3,  2.3,  2.3,  2.3,  2.3],
        [ 2.3,  2.3,  2.3,  2.3,  2.3]])
+#creating array with set of sequence
+np.arange(0,15,3)
+> array([ 0,  3,  6,  9, 12])
 ```
+
+Array Indexing
+
+```python
+x1 = np.array([2,3,4,5,6,7])
+x1
+array([2,3,4,5,6,7])
+
+#assess zero index
+x1[0] #indexing in python starts at 0
+> 2
+
+#assess fifth value
+x1[4]
+> 6
+
+#assess last value
+x1[-1]
+> 7
+
+# we need to specify row and column in multidimensional array
+
+x2 = np.array([[3, 7, 5, 5],
+               [0, 1, 5, 9],
+               [3, 0, 5, 0]])
+      
+# first row and second column
+x2[2,3]
+> 0
+
+# replace value at 0,0
+x2 [0,0] = 12
+x2
+> x2
+array([[12, 7, 5, 5],
+      [0, 1, 5, 9],
+      [3, 0, 5, 0]])
+      
+```
+
+
+
+
+
+
+
+
