@@ -9,6 +9,7 @@ We are becoming more of business hub for first world countries. I am not advocat
 are tend to develop a short attention span, lack patience and ability to concentrate for long time.
 
 ####Bad Approach
+
 Few days back i was trying my hands on painting(via technology), then i felt, the experience is reduce and now i can not feel 
 the liquidness of color. Now, i am just using my finger to draw something...There is absence of smell, trying out to mix different
 color to make new, attachment with painting.
