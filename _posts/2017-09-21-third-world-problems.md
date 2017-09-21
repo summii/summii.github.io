@@ -23,3 +23,5 @@ health and full rationality of the human individual and society?... What is the 
 externally supplied image, and of the lifeless though florid colors of the viewing screen, on the development of the young child's 
 own inner capacity to bring to birth living, mobile, creative images of his[/her] own?
 
+No goverment is working towards 100% literacy achievement, in case, they are too focused to achieve computer literacy.
+
