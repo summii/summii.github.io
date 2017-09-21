@@ -25,5 +25,15 @@ own inner capacity to bring to birth living, mobile, creative images of his[/her
 
 Computers are also effecting the student-teacher relationship. Students can not connect with computers emotionally and in future, there will be no films based on student-teacher complex relationship because technology already killed that emotional bridge.
 
-No goverment is working towards 100% literacy achievement, in case, they are too focused to achieve 100% computer literacy.
+#### Goverment Role
+
+No goverment is working towards 100% literacy achievement, in case, they are too focused to achieve 100% computer literacy.Not
+saying that use of computers are bad but introducing computers to early age kids is what we need to ignore. You can not teach them by just asking them to punch buttons. 
+
+Douglas Sloan says:
+
+>It does not take a flaming Bolshevik, nor even a benighted neo-Luddite, to wonder whether all those computer companies, and their related textbook publishers, that are mounting media campaigns for computer literacy and supplying hundreds of thousands of computers to schools and colleges really have the interests of children and young people as their primary concern.
+
+Goverment should focus on low-tech and experimental education system rather than introducing high-tech classrooms.
+
 
