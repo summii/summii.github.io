@@ -14,6 +14,7 @@ Few days back i was trying my hands on painting(via technology), then i felt, th
 the liquidness of color. Now, i am just using my finger to draw something...There is absence of smell, trying out to mix different
 color to make new, attachment with painting.
 According to Douglas Sloan:
+
 #For the healthy development of growing children especially, the importance of an environment rich in sensory experience -- color, 
 sound, smell, movement, texture, a direct acquantance with nature, and so forth -- cannot be too strongly emphasized.... At what 
 points and in what ways will the computer in education only further impoverish and stunt the sensory experience so necessary to the 
