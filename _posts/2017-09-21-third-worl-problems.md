@@ -15,7 +15,7 @@ the liquidness of color. Now, i am just using my finger to draw something...Ther
 color to make new, attachment with painting.
 According to Douglas Sloan:
 
-#For the healthy development of growing children especially, the importance of an environment rich in sensory experience -- color, 
+>For the healthy development of growing children especially, the importance of an environment rich in sensory experience -- color, 
 sound, smell, movement, texture, a direct acquantance with nature, and so forth -- cannot be too strongly emphasized.... At what 
 points and in what ways will the computer in education only further impoverish and stunt the sensory experience so necessary to the 
 health and full rationality of the human individual and society?... What is the effect of the flat, two-dimensional, visual, and 
