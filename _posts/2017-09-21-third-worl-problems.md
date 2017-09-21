@@ -13,6 +13,7 @@ are tend to develop a short attention span, lack patience and ability to concent
 Few days back i was trying my hands on painting(via technology), then i felt, the experience is reduce and now i can not feel 
 the liquidness of color. Now, i am just using my finger to draw something...There is absence of smell, trying out to mix different
 color to make new, attachment with painting.
+
 According to Douglas Sloan:
 
 >For the healthy development of growing children especially, the importance of an environment rich in sensory experience -- color, 
