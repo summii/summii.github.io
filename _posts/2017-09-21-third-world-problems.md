@@ -3,14 +3,13 @@ layout: post
 title: "Third World Problems-Part 1"
 date: 2017-09-21
 ---
-The system of education is in crisis. We do not money have to pay school teachers but we want to computerized the education sector.
-We are becoming more of business hub for first world countries. I am not advocating against use of technology in education sector
-,however, that there has been too much use of technology in education sector. Childrens who are using technology from an early age
+The system of education is in crisis. We do not have money to pay school teachers but we want to computerized the education sector.
+We are becoming more of business hub for first world countries. I am not advocating against use of technology in education sector, however, that there has been too much use of technology in education sector. Childrens who are using technology from an early age
 are tend to develop a short attention span, lack patience and ability to concentrate for long time.
 
 ## Modern Approach
 
-Few days back i was trying my hands on painting(via technology), then i felt, the experience is reduce and now i can not feel 
+Few days back, i was trying my hands on painting(via technology), then i felt the experience is reduce and now i can not feel 
 the liquidness of color. Now, i am just using my finger to draw something...There is absence of smell, absence of trying out to mix different
 color to make new, attachment with painting.
 
