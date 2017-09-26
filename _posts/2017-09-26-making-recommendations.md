@@ -51,10 +51,10 @@ def sim_distance(prefs, per1, per2):
     if len(si) == 0: return 0
     sum_of_squares = sum([pow(prefs[per1][item]-prefs[per2][item],2) for item in prefs[per1] if item in prefs[per2]])
     return 1/(1+sum_of_squares)
-sim_distance(critics, 'Lisa Rose', 'Toby')
+sim_distance(critics, 'Lisa Rose', 'Toby') #this gives similarity score between Lisa Rose and Toby.
 ```
 
->>> 0.2222222222222222
+>>> 0.2222222222222222 
 
 This function always return a value between 0 and 1, where 1 means that two people have identical preferences.
 
