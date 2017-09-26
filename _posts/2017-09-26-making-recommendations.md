@@ -54,8 +54,42 @@ def sim_distance(prefs, per1, per2):
 sim_distance(critics, 'Lisa Rose', 'Toby') #this gives similarity score between Lisa Rose and Toby.
 ```
 
->>> 0.2222222222222222 
+>> output: 0.2222222222222222 
 
 This function always return a value between 0 and 1, where 1 means that two people have identical preferences.
+
+## Pearson Correlation Score
+
+Pearson correlation coefficient is a measure of how two set of data fit on a staright line. This formula is more comlicated than Euclidean distance score, but it gives better result in situation where data isn't normalized. 
+
+```python
+def sim_pearson(prefs, per1, per2):
+    si = {}
+    for item in prefs[per1]:
+        if item in prefs[per2]:
+            si[item] = 1
+    n = len(si)
+    if n==0: return 0
+    sum1 = sum([prefs[per1][it] for it in si])
+    sum2 = sum([prefs[per2][it] for it in si])
+    
+    sum1sq = sum([pow(prefs[per1][it],2) for it in si])
+    sum2sq = sum([pow(prefs[per2][it],2) for it in si])
+    
+    psum = sum([prefs[per1][it]*prefs[per2][it] for it in si])
+    num = psum-(sum1*sum2/n)
+    den = sqrt((sum1sq-pow(sum1,2)/n)*(sum2sq-pow(sum2,2)/n))
+    if den == 0: return 0
+    r = num/den
+    return r
+    
+sim_distance(critics, 'Lisa Rose', 'Toby') #this gives similarity score between Lisa Rose and Toby.
+```
+
+>> output: 0.9912407071619299
+
+This function will return a value between –1 and 1. A value of 1 means that the two
+people have exactly the same ratings for every item.
+    
 
 
