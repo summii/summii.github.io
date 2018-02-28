@@ -91,5 +91,70 @@ x = xs.pop()      # Remove and return the last element of the list
 print(x, xs)      # Prints "bar [3, 1, 'foo']"
 ```
 
+## Slicing
+Accessing sublists
 
+```
+nums = list(range(5))     # range is a built-in function that creates a list of integers
+print(nums)               # Prints "[0, 1, 2, 3, 4]"
+print(nums[2:4])          # Get a slice from index 2 to 4 (exclusive); prints "[2, 3]"
+print(nums[2:])           # Get a slice from index 2 to the end; prints "[2, 3, 4]"
+print(nums[:2])           # Get a slice from the start to index 2 (exclusive); prints "[0, 1]"
+print(nums[:])            # Get a slice of the whole list; prints "[0, 1, 2, 3, 4]"
+print(nums[:-1])          # Slice indices can be negative; prints "[0, 1, 2, 3]"
+nums[2:4] = [8, 9]        # Assign a new sublist to a slice
+print(nums)               # Prints "[0, 1, 8, 9, 4]"
+```
+
+## Loops
+
+You can loop over the elements of the list like:
+
+```
+animals = ['cat', 'dog', 'monkey']
+for animal in animals:
+    print(animal)
+# Prints "cat", "dog", "monkey", each on its own line.
+```
+
+Here is my favourite built-in to access the index of each element within the body loop.
+
+## Enumerate
+
+````
+animals = ['cat', 'dog', 'monkey']
+for idx, animal in enumerate(animals):
+    print('#%d: %s' % (idx + 1, animal))
+# Prints "#1: cat", "#2: dog", "#3: monkey", each on its own line
+````
+
+## List comprehensions
+
+List comprehension is an elegant way to define and create list in Python.
+
+Simple example:
+
+```
+nums = [0, 1, 2, 3, 4]
+squares = []
+for x in nums:
+    squares.append(x ** 2)
+print(squares)   # Prints [0, 1, 4, 9, 16]
+```
+
+You can make the code simpler by using list comprehension:
+
+```
+nums = [0, 1, 2, 3, 4]
+squares = [x ** 2 for x in nums]
+print(squares)   # Prints [0, 1, 4, 9, 16]
+```
+
+List Comprehension with condition:
+
+```
+nums = [0, 1, 2, 3, 4]
+even_squares = [x ** 2 for x in nums if x % 2 == 0]
+print(even_squares)  # Prints "[0, 4, 16]"
+```
 
