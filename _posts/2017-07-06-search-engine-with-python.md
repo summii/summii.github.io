@@ -8,7 +8,7 @@ date: 2017-07-06
 
 We're going to use python 2.7.If you don't have python 2.7, you need to download a proper version from <a href="https://www.python.org/download/releases/2.7.3/">here</a> 
 
-I assume that you know basics of python, otherwise you can brush-up your skill [here]("https://docs.python.org/2/tutorial/index.html"). 
+I assume that you know basics of python, otherwise you can brush-up your skill [here]("https://summii.github.io/blog/2017/09/04/python-handbook"). 
 
 ## Finding your data
 
