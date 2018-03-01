@@ -158,3 +158,95 @@ even_squares = [x ** 2 for x in nums if x % 2 == 0]
 print(even_squares)  # Prints "[0, 4, 16]"
 ```
 
+## Dictionaries
+
+Dictionary stores (key, value)pairs
+
+```
+d = {'cat': 'cute', 'dog': 'furry'}  # Create a new dictionary with some data
+print(d['cat'])       # Get an entry from a dictionary; prints "cute"
+print('cat' in d)     # Check if a dictionary has a given key; prints "True"
+d['fish'] = 'wet'     # Set an entry in a dictionary
+print(d['fish'])      # Prints "wet"
+# print(d['monkey'])  # KeyError: 'monkey' not a key of d
+print(d.get('monkey', 'N/A'))  # Get an element with a default; prints "N/A"
+print(d.get('fish', 'N/A'))    # Get an element with a default; prints "wet"
+del d['fish']         # Remove an element from a dictionary
+print(d.get('fish', 'N/A')) # "fish" is no longer a key; prints "N/A"
+```
+
+## Loops
+
+It is to iterate over keys in dictionary.
+
+```
+d = {'person': 2, 'cat': 4, 'spider': 8}
+for i in d:
+    legs = d[i]
+    print('A %s has %d legs' % (i, legs))
+# Prints "A person has 2 legs", "A cat has 4 legs", "A spider has 8 legs"
+```
+
+and If you want access to keys
+
+```
+d = {'person': 2, 'cat': 4, 'spider': 8}
+for animal, legs in d.items():
+    print('A %s has %d legs' % (animal, legs))
+# Prints "A person has 2 legs", "A cat has 4 legs", "A spider has 8 legs"
+```
+
+## Dictionary Comprehensions
+
+These are very similar to list comprehensions, For example
+
+```
+nums = [0, 1, 2, 3, 4]
+even_num_to_square = {x: x ** 2 for x in nums if x % 2 == 0}
+print(even_num_to_square)  # Prints "{0: 0, 2: 4, 4: 16}"
+```
+
+### Functions
+
+You can define a python function using 'def'.For example
+
+```
+def sign(x):
+    if x > 0:
+        return 'positive'
+    elif x < 0:
+        return 'negative'
+    else:
+        return 'zero'
+
+for x in [-1, 0, 1]:
+    print(sign(x))
+# Prints "negative", "zero", "positive"
+```
+
+### Classes
+
+The syntaxof defining classes in python is simple.
+
+```
+class Greeter(object):
+
+    # Constructor
+    def __init__(self, name):
+        self.name = name  # Create an instance variable
+
+    # Instance method
+    def greet(self, loud=False):
+        if loud:
+            print('HELLO, %s!' % self.name.upper())
+        else:
+            print('Hello, %s' % self.name)
+
+g = Greeter('Fred')  # Construct an instance of the Greeter class
+g.greet()            # Call an instance method; prints "Hello, Fred"
+g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
+```
+
+End.
+
+
