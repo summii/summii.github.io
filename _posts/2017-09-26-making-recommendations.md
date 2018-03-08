@@ -8,6 +8,41 @@ I'm going to show you ways to use the information of a group of people to make r
 system before when using an online shopping site like Amazon and flipkart.These sites track the users information and when you go online
 , it uses this information to suggest products you might like.
 
+## The Mathematics behind it
+
+Let's say, a customer X loves comedies, hates romatic movies and is ok with action movies on the scale of 1-5.
+
+X = (5,1,3)
+
+Now, lets assume we have to new movies, one is romantic comedy and the other is funny action movie. They have their own vector of qualities.
+
+m1 = (4,5,1) and m2 = (5,1,5)
+
+Now, we have to make recommendation, we will apply dot product between customer's preferences for each movie.
+
+Lets compute,
+
+X.m1 = (5,1,3).(4,5,1)
+
+(5.4) -> user loves comedy movies and this is movie is funny + (1.5) -> user hates romance but this movie is romantic + (3.1) -> user ok with action and this movie is not action = 28
+
+The score we got is 28, but what does this number mean? First we will look into best score and worst score we can get.
+
+(5,5,5).(5.5.5) = 75
+
+worst score,
+(1,1,1).(1,1,1) = 3
+
+So, we must think about 28 on a scale from 3-75.
+
+Let's try for other movie m2,
+
+(5,1,3).(5,1,5) = (5.5) + (1.1) + (3.5) = 41
+
+This is higher than 28, we will recommend movie2 to user.
+
+## More programmatic approach
+
 First thing you need to do is find a way to represent different people and their preferences.In python , a simple way to do this is to use
 nested dictionary.We will create a dictionary of movie critics and their ratings of a small movie dataset.
 
