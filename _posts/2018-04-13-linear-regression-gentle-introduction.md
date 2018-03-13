@@ -5,8 +5,15 @@ date: 2018-04-13
 ---
 
 In this post I will use python to explore **Linear Regression**. Linear Regressions are form of regression, which means that it is a 
-machine learning model that attempts to fina a relationship between predictors and a response variable(it should be continous) or 
+machine learning model that attempts to find a relationship between predictors and a response variable(it should be continous) or 
 Linear Regression is a class of techniques for fitting a straight line to a set of data points.
+            
+![alt text](/img/linear4.png)
+
+* y -> response variable
+* xi -> ith variable
+* B0 -> intercept
+* Bi -> coeff of Xith variable
 
 Lets take a look at some data before we go in-depth.We will to try to predict the number of bike needed on a particular day for a bike 
 sharing program.
