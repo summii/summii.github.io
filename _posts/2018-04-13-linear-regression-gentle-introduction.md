@@ -23,7 +23,7 @@ bikes = pd.read_csv(url)
 bikes.head()
 ```
 
-![alt text](/img/Screen Shot 2018-03-13 at 8.38.59 PM.png)
+![alt text](/img/linear0.png)
 
 We can see that every row represents single hour of bike usuage and we are interested in predicting **count**.
 
@@ -35,6 +35,52 @@ sns.lmplot(x='temp', y='count', data=bikes, aspect=1.5, scatter_kws={'alpha':0.2
 ```
 ![alt text](/img/linear2.png)
 
-To make a prediction, we simply find the temp and see where the line would predict the count. For example, if temperature is 20 degree, then our line would predict that 200 bikes will be needed.
+To make a prediction, we simply find the temp and see where the line would predict the count. For example, if temperature is 20 degree, then our line would predict that 200 bikes will be needed. Now, we can see that if temperature goes up, count also goes up. Let's check the correlation value.
+
+```python
+bikes[['count', 'temp']].corr()
+# 0.3944
+```
+
+Let's build the model in python,
+
+```python
+# create X and y
+feature_cols = ['temp'] # a lsit of the predictors
+X = bikes[feature_cols] # subsetting our data to only the predictors
+y = bikes['count'] # our response variable
+```
+Now, we will import machine learning module,
+
+```python
+# import scikit-learn, our machine learning module
+from sklearn.linear_model import LinearRegression
+```
+
+Finally, we will do fitting and print the *coefficient*
+
+```python
+linreg = LinearRegression() #instantiate a new model
+linreg.fit(X, y) #fit the model to our data
+
+# print the coefficients
+print linreg.coef_
+[ 9.17054048]     # our beta parameters
+```
+
+It represents how x and y move together. A change in 1 degree will result in increase of about 9 nikes rented.
+
+Using *scikit-learn* to make prediction.
+
+```python
+linreg.predict(20)
+# 189.4570
+```
+
+This means that 190 bikes will likely be rented if the temperature is 20 degrees.
+
+
+
+
 
 
