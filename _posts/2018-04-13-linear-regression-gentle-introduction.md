@@ -8,7 +8,7 @@ In this post I will use python to explore **Linear Regression**. Linear Regressi
 machine learning model that attempts to find a relationship between predictors and a response variable(it should be continous) or 
 Linear Regression is a class of techniques for fitting a straight line to a set of data points.
             
-![alt text](/img/linear4.png)
+![alt text](/img/linear4.jpeg)
 
 * y -> response variable
 * xi -> ith variable
