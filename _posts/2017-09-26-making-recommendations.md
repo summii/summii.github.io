@@ -46,7 +46,7 @@ This is higher than 28, we will recommend movie2 to user.
 First thing you need to do is find a way to represent different people and their preferences.In python , a simple way to do this is to use
 nested dictionary.We will create a dictionary of movie critics and their ratings of a small movie dataset.
 
-....python
+```python
 critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
  'Just My Luck': 3.0, 'Superman Returns': 3.5, 'You, Me and Dupree': 2.5,
  'The Night Listener': 3.0},
@@ -64,6 +64,7 @@ critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
 'Jack Matthews': {'Lady in the Water': 3.0, 'Snakes on a Plane': 4.0,
  'The Night Listener': 3.0, 'Superman Returns': 5.0, 'You, Me and Dupree': 3.5},
 'Toby': {'Snakes on a Plane':4.5,'You, Me and Dupree':1.0,'Superman Returns':4.0}}
+```
 
 ## Finding Similar Users
 
