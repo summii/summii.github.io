@@ -112,7 +112,7 @@ Output:
  ('humidity', -3.1188733823964974)]
  ```
  
- ##Regression Metrics
+ ## Regression Metrics
  
  * The mean absolute error
  * The mean squared error
@@ -197,7 +197,7 @@ np.sqrt(metrics.mean_squared_error(y_test, y_pred)) # RMSE
 # Calculate our metric: 166.91
 ```
 
-#Conclusion
+# Conclusion
 In this blog post I tried to cover Linear Regression by building a model that can predict the number of bike needed on a particular day for a bike sharing program.
 
 
