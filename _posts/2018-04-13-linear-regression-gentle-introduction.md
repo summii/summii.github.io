@@ -19,7 +19,7 @@ Lets take a look at some data before we go in-depth.We will to try to predict th
 sharing program.
 
 
-```python
+
 
     # read the data and set the datetime as the index
     # taken from Kaggle: https://www.kaggle.com/c/bike-sharing-demand/data
@@ -31,7 +31,7 @@ sharing program.
 
     bikes.head()
 
-```
+
 
 ![alt text](/img/linear0.png)
 
