@@ -19,6 +19,7 @@ Lets take a look at some data before we go in-depth.We will to try to predict th
 sharing program.
 
 ```
+
 # read the data and set the datetime as the index
 # taken from Kaggle: https://www.kaggle.com/c/bike-sharing-demand/data
 import pandas as pd
@@ -28,6 +29,7 @@ url = 'https://gist.githubusercontent.com/summii/d6bab7e50cbb691d61354564b0972b6
 bikes = pd.read_csv(url)
 
 bikes.head()
+
 ```
 
 ![alt text](/img/linear0.png)
