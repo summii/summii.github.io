@@ -112,7 +112,7 @@ Output:
  ('humidity', -3.1188733823964974)]
  ```
  
- ## Regression Metrics
+ ##Regression Metrics
  
  * The mean absolute error
  * The mean squared error
@@ -164,6 +164,41 @@ y_pred = linreg.predict(X)
 np.sqrt(metrics.mean_squared_error(y, y_pred)) # RMSE
 # 155.75
 ```
+
+Much better results now, but we are doing something wrong here. We are training the line to fit **X** and **y** and asking to predict **X**. This thing can lead us to **overfitting**, which means that our model is memorizing the data and giving us back. A great way to approach this problem by using test/train to fit machine learning model.
+
+
+```python
+from sklearn.cross_validation import train_test_split
+# function that splits data into training and testing sets
+
+
+feature_cols = ['temp']
+X = bikes[feature_cols]
+y = bikes['count']
+# setting our overall data X, and y
+# Note that in this example, we are attempting to find an association between the temperature of the day and the number of bike rentals.
+
+X_train, X_test, y_train, y_test = train_test_split(X, y) # split the data into training and testing sets
+# X_train and y_train will be used to train the model
+# X_test and y_test will be used to test the model
+# Remember that all four of these variables are just subsets of the overall X and y.
+
+linreg = LinearRegression()
+# instantiate the model
+
+linreg.fit(X_train, y_train)
+# fit the model to our training set
+
+y_pred = linreg.predict(X_test)
+# predict our testing set
+
+np.sqrt(metrics.mean_squared_error(y_test, y_pred)) # RMSE
+# Calculate our metric: 166.91
+```
+
+#Conclusion
+In this blog post I tried to cover Linear Regression by building a model that can predict the number of bike needed on a particular day for a bike sharing program.
 
 
 
