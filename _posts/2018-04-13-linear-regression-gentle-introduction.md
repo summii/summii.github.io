@@ -112,15 +112,58 @@ Output:
  ('humidity', -3.1188733823964974)]
  ```
  
- ** Regression Metrics
+ ## Regression Metrics
  
  * The mean absolute error
  * The mean squared error
  * The root mean squared error
  
+ ![alt text](/img/B05260_10_16.jpg)
+ 
  RMSE is the most preferred metric for regression but you can choose any one.
  
- using temperature
+ using temperature only
+ 
+ ```python
+ from sklearn import metrics
+# import metrics from scikit learn
+
+feature_cols = ['temp']
+# create X and y
+X = bikes[feature_cols]
+linreg = LinearRegression()
+linreg.fit(X, y)
+y_pred = linreg.predict(X)
+np.sqrt(metrics.mean_squared_error(y, y_pred)) # RMSE
+# Can be interpreted loosely as an average error
+#166.45
+```
+
+Now, let's try it using temperature and humidity.
+
+```python
+feature_cols = ['temp', 'humidity']
+# create X and y
+X = bikes[feature_cols]
+linreg = LinearRegression()
+linreg.fit(X, y)
+y_pred = linreg.predict(X)
+np.sqrt(metrics.mean_squared_error(y, y_pred)) # RMSE
+# 157.79
+```
+
+Better than last one, Now try with more features
+
+```python
+feature_cols = ['temp', 'humidity', 'season', 'holiday', 'workingday', 'windspeed', 'atemp']
+# create X and y
+X = bikes[feature_cols]
+linreg = LinearRegression()
+linreg.fit(X, y)
+y_pred = linreg.predict(X)
+np.sqrt(metrics.mean_squared_error(y, y_pred)) # RMSE
+# 155.75
+```
 
 
 
