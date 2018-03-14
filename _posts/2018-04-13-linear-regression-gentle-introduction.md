@@ -18,7 +18,8 @@ Linear Regression is a class of techniques for fitting a straight line to a set 
 Lets take a look at some data before we go in-depth.We will to try to predict the number of bike needed on a particular day for a bike 
 sharing program.
 
-```python
+
+´´´python
 
     # read the data and set the datetime as the index
     # taken from Kaggle: https://www.kaggle.com/c/bike-sharing-demand/data
@@ -30,7 +31,7 @@ sharing program.
 
     bikes.head()
 
-```
+´´´
 
 ![alt text](/img/linear0.png)
 
