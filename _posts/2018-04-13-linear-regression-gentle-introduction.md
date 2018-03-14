@@ -28,7 +28,7 @@ sharing program.
     url =     'https://gist.githubusercontent.com/summii/d6bab7e50cbb691d61354564b0972b69/raw/8d3ec48ac2e2c12fa4b95c8d8aa257c1799e31bc/bikeshare.csv'
     bikes = pd.read_csv(url)
 
-   bikes.head()
+    bikes.head()
 
 ```
 
