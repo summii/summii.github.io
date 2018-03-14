@@ -1,4 +1,4 @@
 name: Sumeet Bhadana
-markdown: kramdown
+markdown: CommonMark
 
 permalink: /blog/:year/:month/:day/:title
