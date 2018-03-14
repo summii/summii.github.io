@@ -20,7 +20,7 @@ sharing program.
 
 
 
-{% highlight python %}
+```python
     # read the data and set the datetime as the index
     # taken from Kaggle: https://www.kaggle.com/c/bike-sharing-demand/data
     import pandas as pd
@@ -30,7 +30,7 @@ sharing program.
     bikes = pd.read_csv(url)
 
     bikes.head()
- {% endhighlight %}
+```
 
 
 
