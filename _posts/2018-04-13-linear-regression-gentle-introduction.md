@@ -13,7 +13,7 @@ Linear Regression is a class of techniques for fitting a straight line to a set 
 * y -> response variable
 * xi -> ith variable
 * B0 -> intercept
-* Bi -> coeff of Xith variable
+* Bi -> coeff of Xi variable
 
 Lets take a look at some data before we go in-depth.We will to try to predict the number of bike needed on a particular day for a bike 
 sharing program.
@@ -85,6 +85,42 @@ linreg.predict(20)
 ```
 
 This means that 190 bikes will likely be rented if the temperature is 20 degrees.
+
+Now let's actually build our linear regression model with more features and we will take a look at the model's coefficients. Later, we will use Regression metrics to check which of the predictors are useful for us.
+
+```python
+# create a list of features
+feature_cols = ['temp', 'season', 'weather', 'humidity']
+# create X and y
+X = bikes[feature_cols]
+y = bikes['count']
+
+# instantiate and fit
+linreg = LinearRegression()
+linreg.fit(X, y)
+
+# pair the feature names with the coefficients
+zip(feature_cols, linreg.coef_)
+```
+Output:
+
+```pyhton
+# a 1 unit increase in temperature is associated with rental increase of
+[('temp', 7.8648249924774403), 
+ ('season', 22.538757532466754),
+ ('weather', 6.6703020359238048),
+ ('humidity', -3.1188733823964974)]
+ ```
+ 
+ ** Regression Metrics
+ 
+ * The mean absolute error
+ * The mean squared error
+ * The root mean squared error
+ 
+ RMSE is the most preferred metric for regression but you can choose any one.
+ 
+ using temperature
 
 
 
