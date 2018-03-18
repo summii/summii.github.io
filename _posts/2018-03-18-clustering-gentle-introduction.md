@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clustering - A Gentle Introduction"
-date: 2018-04-18
+date: 2018-03-18
 ---
 
 ## Clustering
