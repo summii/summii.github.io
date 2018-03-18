@@ -63,6 +63,32 @@ df.groupby('cluster').mean(
 
 ![alt text](/img/cluster2.png)
 
+We can see that cluster 0 has higher content for every features, these might be good beers and cost more.Cluster 2 has very low content for alcohol and calories, these might be light beers and cost less.
+
+Let's use **pyplot** to make graph:
+
+```python
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+# save the DataFrame of cluster centers
+centers = df.groupby('cluster').mean()
+# create a "colors" array for plotting
+colors = np.array(['red', 'green', 'blue', 'yellow'])
+# scatter plot of calories versus alcohol, colored by cluster (0=red, 1=green, 2=blue)
+plt.scatter(df.calories, df.alcohol, c=colors[list(df.cluster)], s=50)
+
+# cluster centers, marked by "+"
+plt.scatter(centers.calories, centers.alcohol, linewidths=3, marker='+', s=300, c='black')
+
+# add labels
+plt.xlabel('calories')
+plt.ylabel('alcohol')
+```
+
+![alt text](/img/cluster3.png)
+
 
 
 
