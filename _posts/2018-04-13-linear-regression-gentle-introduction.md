@@ -106,6 +106,15 @@ linreg.fit(X, y)
 # pair the feature names with the coefficients
 zip(feature_cols, linreg.coef_)
 ```
+
+output:
+```python
+# a 1 unit increase in temperature is associated with rental increase of
+[('temp', 7.8648249924774403), 
+ ('season', 22.538757532466754),
+ ('weather', 6.6703020359238048),
+ ('humidity', -3.1188733823964974)]
+```
  
 
  
