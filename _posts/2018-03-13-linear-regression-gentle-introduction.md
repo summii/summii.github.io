@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linear Regression - A Gentle Introduction"
-date: 2018-04-13
+date: 2018-03-13
 ---
 
 In this post I will use python to explore **Linear Regression**. Linear Regressions are form of regression, which means that it is a 
