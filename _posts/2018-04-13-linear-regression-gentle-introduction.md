@@ -109,8 +109,7 @@ zip(feature_cols, linreg.coef_)
  
 
  
- 
- ## Regression Metrics
+## Regression Metrics
  
  * The mean absolute error
  * The mean squared error
