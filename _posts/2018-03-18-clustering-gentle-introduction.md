@@ -6,14 +6,6 @@ date: 2018-03-18
 
 ## Clustering
 
-~~~ python
-# a comment
-import datetime
-
-def get_or_create_user(session, model, **kwargs):
-    instance = session.query(model).filter_by(twitter_user_id=kwargs["twitter_user_id"]).first()
-	return instance
-~~~
 
 It is a part of unsupervised machine learning models that attempt to group data points into clusters.
 
