@@ -37,30 +37,38 @@ Here we have 2 beers rows with 5 columns: name, calories, sodium, alcohol, and c
 ignore names of beer in clustering.
 
 ```python
+
 X = df.drop('name', axis=1)
+
 ```
 
 Now we will perform K-Means using scikit-learn:
 
 
 ```python
+
 # K-means with 3 clusters
 from sklearn.cluster import KMeans
 km = KMeans(n_clusters=3, random_state=1)
 km.fit(X)
+
 ```
 
 K-Means algorithm has come up with three clusters.
 
 ```python
+
 # save the cluster labels and sort by cluster
 df['cluster'] = km.labels_
+
 ```
 
 We can use **groupby** and **mean** to see each cluster
 
 ```python
-df.groupby('cluster').mean(
+
+df.groupby('cluster').mean()
+
 ```
 
 ![alt text](/img/cluster2.png)
@@ -70,6 +78,7 @@ We can see that cluster 0 has higher content for every features, these might be 
 Let's use **pyplot** to make graph:
 
 ```python
+
 import matplotlib.pyplot as plt
 %matplotlib inline
 
@@ -87,6 +96,7 @@ plt.scatter(centers.calories, centers.alcohol, linewidths=3, marker='+', s=300, 
 # add labels
 plt.xlabel('calories')
 plt.ylabel('alcohol')
+
 ```
 
 ![alt text](/img/cluster3.png)
