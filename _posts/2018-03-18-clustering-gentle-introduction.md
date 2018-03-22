@@ -22,11 +22,13 @@ In this blog, we will be exploring **k-means** clustering, which is one of the m
 Let's jump into problem, do you know different types of beer? Here, we will categorize beers based on different quantitative features.
 
 ~~~ python
+
 df = pd.read_csv('https://gist.githubusercontent.com/summii/58f7b645bc6d1ac2f002e562264e47a4/raw/bd81c819d0689889223d19d764a5323392e33c22/beers.txt', sep=',')
 
 df.shape
 
 df.head()
+
 ~~~
 
 ![alt text](/img/cluster1.png)
