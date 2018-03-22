@@ -5,11 +5,6 @@ date: 2018-03-18
 ---
 
 ## Clustering
-{% ruby %}
-def what?
-42
-end
-{% ruby %}
 
 It is a part of unsupervised machine learning models that attempt to group data points into clusters.
 
