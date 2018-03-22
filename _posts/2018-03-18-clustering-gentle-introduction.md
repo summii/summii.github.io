@@ -6,7 +6,6 @@ date: 2018-03-18
 
 ## Clustering
 
-
 It is a part of unsupervised machine learning models that attempt to group data points into clusters.
 
 **Cluster** - A group of data points that behave similarly.
