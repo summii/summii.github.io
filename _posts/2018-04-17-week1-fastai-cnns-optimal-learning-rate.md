@@ -36,5 +36,6 @@ probably take less tha one epoch if you have a small batch size
 
 Reference
 
-1.[Fastai]: http://www.fast.ai/
-2.[cyclical learning rate]: https://arxiv.org/pdf/1506.01186.pdf
+1.[Fastai](http://www.fast.ai/)
+
+2.[cyclical learning rate](https://arxiv.org/pdf/1506.01186.pdf)
