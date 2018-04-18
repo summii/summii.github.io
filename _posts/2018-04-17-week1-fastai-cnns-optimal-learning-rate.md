@@ -4,7 +4,7 @@ title: "Week 1 fast.ai- CNNs, kernel, Learning Rate"
 date: 2018-04-17
 ---
 
-Deep learning is essentially a particularway of doing machine learning whereyou give your system a bunch of examples and then it learns the rules and representations vs manually programming the rules. We have interesting applications today like face detection, self-driving cars , etc. Deep learning allows machine to train itself much longer and therefore learn much "deeper" and ultimately producing much more accurate predictions.
+Deep learning is essentially a particular way of doing machine learning where you give your system a bunch of examples and then it learns the rules and representations vs manually programming the rules. We have interesting applications today like face detection, self-driving cars , etc. Deep learning allows machine to train itself much longer and therefore learn much "deeper" and ultimately producing much more accurate predictions.
 
 Machine leanring has recently evolved into Deep learning mainly due to these factors:
 
@@ -15,7 +15,7 @@ Machine leanring has recently evolved into Deep learning mainly due to these fac
 
 CNNs are the most important architecture for deep neural networks. They are the state of the art for solving some big problems.
 
-The basic of structure of a CNN is the convolution whicj on its is a relatively starightforward process. A convolution is a linear operation that finds interesting features in an image. Performing ine instance of the convolution operation requires following steps:
+The basic of structure of a CNN is the convolution which on its is a relatively starightforward process. A convolution is a linear operation that finds interesting features in an image. Performing ine instance of the convolution operation requires following steps:
 
 * Identify kernel matrix -  this is typically a 3 x 3 matrix or in some cases a 1 x 1 matrix.
 * Perform element wise multiplication between kernel and image pixels.
@@ -24,7 +24,7 @@ The basic of structure of a CNN is the convolution whicj on its is a relatively 
 
 This operation repeated until we have completed passes over the entire image.
 
-----> Others parameters like kernel and padding that determine the dimension of the activation maps, will discuss in next blog.
+Others parameters like kernel and padding that determine the dimension of the activation maps, will discuss in next blog.
 
 To train an image classifier using Fastai library you need to:
 
@@ -35,3 +35,6 @@ probably take less tha one epoch if you have a small batch size
 * train **learn** size
 
 Reference
+
+1.[Fastai]: http://www.fast.ai/
+2.[cyclical learning rate]: https://arxiv.org/pdf/1506.01186.pdf
