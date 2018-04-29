@@ -6,7 +6,7 @@ date: 2018-03-13
 
 
 
-###Linear Regression 
+### Linear Regression 
 
 Most basic form of predictive analysis. It is a linear approach to model the relationship between a dependent variable(Y) and a few independent variables(X). 
 
@@ -24,7 +24,7 @@ Optimization algorithms are used by machine learning to find a good set of model
 
 Cost function tells us how well the neural network is performing. Our goal during training is to find parameters that minimize the cost function. For an example of a cost function, consider Mean Squared Error function:
 
-													MSE=1n∑i=0n(Ŷ i–Yi)2
+	MSE=1n∑i=0n(Ŷ i–Yi)2
 The mean of square differences between our prediction Ŷ  and desired value Y is what we want to minimize.
 
 ### Gradient Descent
@@ -93,7 +93,7 @@ Random Forest is an ensemble technique that combines multiple decision tree.
 
 Reference
 
-2.[sebastian raschka python machine learning](https://www.amazon.in/Python-Machine-Learning-Sebastian-Raschka-ebook/dp/B00YSILNL0)
+1.[sebastian raschka python machine learning](https://www.amazon.in/Python-Machine-Learning-Sebastian-Raschka-ebook/dp/B00YSILNL0)
 
 
 
