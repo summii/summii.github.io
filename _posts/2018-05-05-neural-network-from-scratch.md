@@ -51,8 +51,41 @@ Our input data matrix X is of dimension 3x2 and corresponding output Y is of dim
 
 Each input value or element in matix X needs to be multiply by corresponding weight than added together with all other result for each neuron.
 
----- final code
+```python
+import numpy as np
 
+X = np.array(([3,5], [5,1], [10,2]), dtype=float)
+y = np.array(([75],[82],[93]), dtype=float)
+X = X/np.amax(X, axis=0)
+y = y/100 #max test score is 100
+
+class Neural_Network(object):
+    def __init__(self):
+        #define Hyperparamters
+        self.inputLayerSize = 2
+        self.outputLayerSize = 1
+        self.hiddenLayerSize = 3
+        
+        #Weights (Parameters)
+        self.W1 = np.random.randn(self.inputLayerSize, self.hiddenLayerSize)
+        self.W2 = np.random.randn(self.hiddenLayerSize, self.outputLayerSize)
+    def forward(self, X):
+        # Propagate input through network
+        self.z2 = np.dot(X, self.W1)
+        self.a2 = self.sigmoid(self.z2)
+        self.z3 = np.dot(self.a2, self.W2)
+        yhat = self.sigmoid(self.z3)
+        return yhat
+    def sigmoid(self, z):
+        #Apply sigmoid activatio function to scalar, vector
+        return 1/(1+np.exp(-z))
+
+NN = Neural_Network()
+
+yhat = NN.forward(X)
+
+print(yhat)
+```
 
 
 
