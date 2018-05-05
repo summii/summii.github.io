@@ -26,7 +26,7 @@ The solution is to scale our data that way our model only see standarized units
 Now we can build our neural network and we know our network has two inputs and one output. We will call our output data ŷ because it is an estimate of y but not same as y.
 Any layer between input and output is call hidden layer and Nowadays we can built many many hidden layers. these are known deep network.
 
-![alt text](/img/synapse.png)
+![alt text](/img/synapse2.png)
 
 Here, we are going to use one hidden layer with 3 hidden units but if you want to build a deep neaural network then just stack bunch of layers together. Synapse have a very simple job, they take a value and multiply by specific weight and update the result. Neurons are little more complicated, their job is to add together the output from their all synapse and apply activation function.Few activation functions allow neuron nets to model complex non-linear patterns that simple model may miss. For our model we will use sigmoid activation function.
 
