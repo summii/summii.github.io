@@ -23,7 +23,7 @@ The solution is to scale our data that way our model only see standardized units
 ![alt text](/img/scaling.png)
 
 Now we can build our neural network and we know our network has two inputs and one output. We will call our output data ŷ because it is an estimate of y but not same as y.
-Any layer between input and output is called hidden layer and Nowadays we can built many many hidden layers,these are known deep network.
+Any layer between input and output is called hidden layer and Nowadays we can built mmany hidden layers,these are known deep network.
 
 ![alt text](/img/synapse2.png)
 
@@ -39,7 +39,7 @@ Our network has two input  and 3 hidden units and one output. These are the exam
 
 ![alt text](/img/elementwise.png)
 
-we are going to use matrics to pass through multiple inputs at aonce. This will allow us doing big computations speed up.
+we are going to use matrics to pass through multiple inputs at a once. This will allow us doing big computations speed up.
 
 ![alt text](/img/matrix.png)
 
