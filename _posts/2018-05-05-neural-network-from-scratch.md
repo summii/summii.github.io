@@ -27,7 +27,7 @@ Any layer between input and output is called hidden layer and Nowadays we can bu
 
 ![alt text](/img/synapse2.png)
 
-Here, we are going to use one hidden layer with 3 hidden units but if you want to build a deep neural network then just stack bunch of layers together. Synapse have a very simple job, they take a value and multiply by specific weight and update the result. Neurons are little more complicated, their job is to add together the output from all their synapse's and apply activation function.Few activation functions allow neuron nets to model complex non-linear patterns that simple model may miss. For our model we will use sigmoid activation function.
+Here, we are going to use one hidden layer with 3 hidden units but if you want to build a deep neural network then just stack bunch of layers together. Synapse have a very simple job, they take a value and multiply by specific weight and update the result. Neurons are little more complicated, their job is to add together the output from all their synapses and apply activation function.Few activation functions allow neuron nets to model complex non-linear patterns that simple model may miss. For our model we will use sigmoid activation function.
 
 
 ## Forward Propagation
@@ -35,7 +35,7 @@ Here, we are going to use one hidden layer with 3 hidden units but if you want t
 Now, we will implement our neural network in python.
 
 
-Our network has two input  and 3 hidden units and one output. These are the example of hyperparameters. Hyperparameters are constant that is to establish the structure and behaviour of network but can not be updated as we train the network. Our learning algorithm is not capable of deciding if it needs another hidden layer unit. What neural net do learn are the parameters, specifically weight on synapse. We will move our data through our network, in a method called forward propagation. Rather than passing inputs to networks one at a time,
+Our network has two input  and 3 hidden units and one output and these are the example of hyperparameters. Hyperparameters are constant that establish the structure and behaviour of network but can not be updated as we train the network. Our learning algorithm is not capable of deciding if it needs another hidden layer unit. What neural net do learn are the parameters, specifically weight on synapse. We will move our data through our network, in a method called forward propagation. Rather than passing inputs to networks one at a time,
 
 ![alt text](/img/elementwise.png)
 
