@@ -13,17 +13,17 @@ Let's say you recorded your number of study hours ,number of sleep and score on 
 
 ![alt text](/img/numpy.png)
 
-This is called supervised regression.It is supervised because this example has inputs and outputs and it is a regression problem because we are predicting yoour test, which is 
+This is called supervised regression.It is supervised because this example has inputs and outputs and it is a regression problem because we are predicting your test score, which is 
 continous output.If we were predicting your test grade than it will be called classification problem and non-regression problem.
 
 We will use Artificial Neural Network, this is usually based on how the neurons works in our brain.Before we pass through our data into the model, we need to fix the differences in the units of our data. Both our inputs are in hour but our output is a test score on the scale between 0-100. Neural networks are smart but not smart enough to guess the units of our data. It is like asking our model to compare apples to oranges but most learning models want to compare only apples to apples.
 
-The solution is to scale our data that way our model only see standarized units
+The solution is to scale our data that way our model only see standardized units
 
 ![alt text](/img/scaling.png)
 
 Now we can build our neural network and we know our network has two inputs and one output. We will call our output data ŷ because it is an estimate of y but not same as y.
-Any layer between input and output is call hidden layer and Nowadays we can built many many hidden layers,these are known deep network.
+Any layer between input and output is called hidden layer and Nowadays we can built many many hidden layers,these are known deep network.
 
 ![alt text](/img/synapse2.png)
 
