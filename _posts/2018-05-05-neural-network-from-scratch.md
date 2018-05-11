@@ -15,6 +15,8 @@ date: 2018-05-05
 
 ![alt text](/img/6.png)
 
+![alt text](/img/6.png)
+
 
 
 ![alt text](/img/neural_net2.jpeg)
