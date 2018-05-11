@@ -15,7 +15,7 @@ date: 2018-05-05
 
 ![alt text](/img/6.png)
 
-![alt text](/img/6.png)
+![alt text](/img/7.png)
 
 
 
