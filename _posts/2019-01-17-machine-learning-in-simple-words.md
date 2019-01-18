@@ -7,7 +7,7 @@ date: 2019-01-17
 
 ## We Understand Simple Words
 
-Machine Learning is like a drug in a city. Now a days everyone talks about it in the corners and only few able to get it. In my past year, articles about machine learning
+Machine Learning is like a new drug in a city. Now a days everyone talks about it in the corners and only few able to get it. In my past year, articles about machine learning
  divided into two types: these are either full book of formulas and theorems that i have never able to finish reading even to middle, or magical stories about Artificial
  Intelligence and about google data scientist.
 
