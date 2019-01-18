@@ -49,3 +49,13 @@ There is a big hunt for good data sets. Large companies can reveal their algorit
 
 **Algorithms** One problem can be solved by various methods approximately always. Accuracy, speed and size of the finished model depend on the choice of algorithm. But there is problem: if the data is shit, even the best algorithm will not help.
 
+Now Let's decode the fancy terms.
+
+Artificial Intelligence is the name of the whole field, like biology or chemistry.
+
+Machine learning is a section of Artificial Intelligence. Important, but not the only one.
+
+Neural Networks are the type of machine learning. There are others too.
+
+Deep learning is the architecture of neural networks, one of the approach to their construction and training.
+
