@@ -59,3 +59,102 @@ Neural Networks are the type of machine learning. There are others too.
 
 Deep learning is the architecture of neural networks, one of the approach to their construction and training.
 
+
+In machine learning there are only four main areas
+
+# PART 1
+
+### Teaching with a teacher
+
+They like to divide classical  training into two categories: with teacher - supervised, without teacher - unsupervised. In this first case, the machine has a teacher who tells her how to properly find. Tells that in this picture a cat, and on this a dog. The teacher has already distinguish all the data into cats and dogs and machine can learn from it.
+
+Second case, we will discuss in later part.
+
+Supervised tasls are divided into two types: classification - the prediction of category of the object and regression - the prediction of the place on the number line.
+
+### Classification
+
+"It separates objects according to a previously known attribute. Socks by colors, documnets by language, music by genres"
+
+Today is used to:
+* Spam filters
+* Language definition
+* Search for similar documents
+* Tonality analysis
+* Recognitionof handwritten letters and numbers
+* Suspicious transaction detection
+
+Take an example of a useful classification, Here you apply for a credit card. How can the bank make sure you pay your emi on time or not? Similarly, but bank has thousands of profiles of other people who have already applied for credit card before you. It shows their age, education, position, salary level and importantly, which of them paid their emi's on time and who faced the problems.
+
+Popular algorithms: Naive Bayes , Decision Trees , Logistic Regression , K-Nearest Neighbors , Support Vectors Vectors
+
+### Regression
+"Draws a line along my point"
+
+Today is used to:
+* Forecast of the value of securities
+* Analysis of demand, sales
+* Medical diagnosis
+
+Popular algorithms: Linear or Polynomial Regression
+
+Regression is the same as classification, but instead of a category we predict a number. The cost of the car by its mileage, the number if traffic jams by the time of day.
+
+When regression draws a straight line, it is called linear, when the curve is polynomial and logistic regression is not really a regression but a classification method, which is always confusing.
+
+### Teaching without a teacher
+
+In training withour a teacher, the machine just dumps a bunch of photos of animals on the table and say "figure out who here is like someone". The data is not labeled and has no teacher and she tries to find patterns itself.
+
+Unsupervised is more often used us a method of data analysis and not as basic algorithm.
+
+
+### Clustering
+
+"Splits objects by an unknown attribute. The machine itself decides how best."
+
+Today is used to: 
+* Market segmentation(types of customers loyalty)
+* Image compression
+* Analysis and markup of new data
+* Abnormal behaviour detectors
+
+Popular algorithms: K- Mode , Mean-Shift , DBSCAN
+
+Clustering is a classification , but without previously known classes. She herself searches for similar objects and unites then into clusters. An excellent example of clustering can be remembered in iphoto or google photos applications, shich find the faces of people in photos and group them into albums.
+
+It can also be used as an anomaly detector.
+
+### Dimension Reduction (Generalization)
+
+"Collects specific features in a higher level abstraction"
+
+Today is used to: 
+* Recommended systems
+* Identification and search for similar documents
+* Fake image analysis
+* Risk management
+
+
+Popular algorithms: Principal component method (PCA), Singular decomposition (SVD), Dirichlet latent placement (LDA), Latent semantic analysis (LSA, pLSA, GLSA), t-SNE (for visualization)
+
+Intially, these were the methods os hardcore data scientists, who were loaded with trucks of numbers and told to find something interesting. When Excel did not help, they thought to train machines to look for patterns.
+
+For us, the pratical use of their methods is that we can combine several signs into one and get abstraction. For example, dogs with triangular ears, long noses and large tails are joined into useful abstraction of the "shepeerd".
+
+### Search for rules(Association)
+
+"Looking for patterns in the flow of orders"
+
+Today is used to:
+* Forecast stock ans sales
+* Analysis of goods purchased together
+* PLacing goods on shelves
+* Analysis of patterns of behaviour on websites
+
+Suppose a customer takes a beer in the far corner of a store and goes to the cashier. Should I put nuts on his ways? Do people take thme together?When you own a hypermarket chain, the answer is not always obvious to you but one tactical improvemnet int the placement of inprovement in the placement of goods can make a good profit.
+
+
+
+
+
