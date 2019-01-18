@@ -11,7 +11,7 @@ Machine Learning is like a new drug in a city. Now a days everyone talks about i
  divided into two types: these are either full book of formulas and theorems that i have never able to finish reading even to middle, or magical stories about Artificial
  Intelligence and about google data scientist.
 
-So, I decide to write few post myself, an introduction in my words - in simple language, without formula-theorems, but wiht examples of real problems and solutions. I will try to write same thing with ugly formula-theorems too in another post.
+So, I decide to write few post myself, an introduction in my words - in simple language, without formula-theorems, but with examples of real problems and solutions. I will try to write same thing with ugly formula-theorems too in another post.
 
 ### Birth of Machine Learning
 
