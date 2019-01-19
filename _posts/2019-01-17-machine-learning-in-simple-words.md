@@ -62,7 +62,7 @@ Deep learning is the architecture of neural networks, one of the approach to the
 
 In machine learning there are only four main areas
 
-# PART 1
+# PART 1 Classical Training
 
 ### Teaching with a teacher
 
