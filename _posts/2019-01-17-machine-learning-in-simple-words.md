@@ -149,10 +149,38 @@ For us, the pratical use of their methods is that we can combine several signs i
 Today is used to:
 * Forecast stock ans sales
 * Analysis of goods purchased together
-* PLacing goods on shelves
+* Placing goods on shelves
 * Analysis of patterns of behaviour on websites
 
 Suppose a customer takes a beer in the far corner of a store and goes to the cashier. Should I put nuts on his ways? Do people take thme together?When you own a hypermarket chain, the answer is not always obvious to you but one tactical improvemnet int the placement of inprovement in the placement of goods can make a good profit.
+
+
+# Part 2 Ensembles
+
+"A bunch of stupid trees learns to correct each others mistakes"
+
+Today is used to:
+* In total, where classical algorithm are suitable
+* Search Engine
+* Computer vision
+* Object Recognition
+
+Ways to to ensemble:
+
+**Stacking** We train different algorithms and transfer their results to the input of the latter, which takes the final decision.
+
+**Begging** It is Bootstrap Aggregating. We train one algorithm many times on sample from the source data. At the very end we average the answers.
+
+# Part 3 Neural Networks and deep learning
+
+Here is my last blog on this [Neural Networks](https://summii.github.io/blog/2018/05/05/neural-network-from-scratch)
+
+Today is used to:
+
+* Instead of all the above algorithm in general
+* Identification of objects in the photo
+* Speech recognition and synthesis
+* Image processing, style transfer
 
 
 
