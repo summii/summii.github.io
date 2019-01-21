@@ -87,6 +87,11 @@ print(yhat)
 ```
 
 
+When we have a network, our task is to place the weight correctly so that the neurons react to the neccessary signals. Here we need to remember that we also have data - examples of "inputs" and correct "outputs". We will show the neural network pattern of the same number 4 and say "adjust your weigths so that at your output with such an input four always light up".
+
+At first. all the weights are simply placed randomly,we show the network a number, it gives out some random answer and we compare how much the result differ from the one we need. Then we go through the network in the opposite direction, from the outputs to the inputs and we speak to each neuron - so, you activated for some reason, everything went wrong because of you, lets react a little less to this connetion and a little more on that. This approach also known as Back Propagation.
+
+
 
 
 
