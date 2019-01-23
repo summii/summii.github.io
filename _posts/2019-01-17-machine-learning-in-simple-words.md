@@ -185,7 +185,6 @@ Today is used to:
 
 Any neaural network is a collection of neurons and connections between them. A neuron is best represented simply as a function with a bunch of inputs and one output. The task of a neuron is to take numbers from its inputs, performs a fucntion on them and give the results to the output. A simple example example of a useful neron, sum up all the digits from the inputs and if their sum is more than N, output a unit, otherwise, zero.
 
-### CNN
 
 
 
