@@ -15,6 +15,10 @@ So, I decide to write few post myself, an introduction in my words - in simple l
 
 ### Birth of Machine Learning
 
+From Wiki:
+
+The name *machine learning* was coined in 1959 by Arthur Samuel.Tom M. Mitchell provided a widely quoted, more formal definition of the algorithms studied in the machine learning field: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."
+
 Let's analyze with very simple example.
 
 Suppose ravi wants to buy a car and considers how much money he needs to save for this. He reviewed  a dozen ads on the internet and saw that new car cost about Rs. 10lakh ,
@@ -185,7 +189,7 @@ Today is used to:
 
 Any neaural network is a collection of neurons and connections between them. A neuron is best represented simply as a function with a bunch of inputs and one output. The task of a neuron is to take numbers from its inputs, performs a fucntion on them and give the results to the output. A simple example example of a useful neron, sum up all the digits from the inputs and if their sum is more than N, output a unit, otherwise, zero.
 
-
+aws s3 cp oldnavy_categoryUrls.txt s3://s3-job-loader-rd/janauary2019/oldnavy_categoryUrls20190116.urls
 
 
 
