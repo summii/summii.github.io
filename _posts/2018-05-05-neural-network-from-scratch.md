@@ -1,10 +1,7 @@
 ---
 layout: post
 title: "Neural Network From Scratch"
-date: 2018-05-05
 ---
-
-
 Let's say, you want to predict some output Y given some input value X. For example, maybe you want to predict your score in exam based on how many hours you sleep and how many 
 hours you study night before. To use a machine learning approach, you need some data,
 

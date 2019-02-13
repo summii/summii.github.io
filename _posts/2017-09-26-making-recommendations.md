@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Build a Simple Recommendation System"
-date: 2017-09-26
 ---
-
 I'm going to show you ways to use the information of a group of people to make recommendations to other people.You have seen recommendation 
 system before when using an online shopping site like Amazon and flipkart.These sites track the users information and when you go online
 , it uses this information to suggest products you might like.

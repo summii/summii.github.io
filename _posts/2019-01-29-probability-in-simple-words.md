@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Probability for Everyone[Math]"
-date: 2019-01-29
 ---
-
 In 1884, peirre-simon laplace wrote:
 
 Probability theory is nothing but common sense reduced to calculation. ... [Probability] is thus simply a fraction whose numerator is the number of favorable cases and whose denominator is the number of all the cases possible ... when nothing leads us to expect that any one of these cases should occur more than any other.
