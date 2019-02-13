@@ -9,4 +9,4 @@ Machine Learning enthusiast. Computer Science Graduate. I work at [Semantics3](h
 
 ### Contact me
 
-[shrieko\*gmail\*com](mailto:sumeetbhadana99\*gmail\*com)
+[Mail](mailto:sumeetbhadana99@gmail.com)
