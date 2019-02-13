@@ -14,7 +14,7 @@ So, I decide to write few post myself, an introduction in my words - in simple l
 
 From Wiki:
 
-The name *machine learning* was coined in 1959 by Arthur Samuel.Tom M. Mitchell provided a widely quoted, more formal definition of the algorithms studied in the machine learning field: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."
+>The name *machine learning* was coined in 1959 by Arthur Samuel.Tom M. Mitchell provided a widely quoted, more formal definition of the algorithms studied in the machine learning field: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."
 
 Let's analyze with very simple example.
 
