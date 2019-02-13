@@ -57,5 +57,3 @@ print(P((odd & prime), D))  # The probability of an odd prime die roll
 output: (1,3)
 
 ```
-
-## Urn Problems

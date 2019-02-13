@@ -42,7 +42,7 @@ So, if we want to train a machine, we need three things.
 
 Data is collected as they can, The most cunning, such as Google, use their own users for free. Remember the ReCaptcha, which sometimes require "to find all the road signs in a photo" - this is it.
 
-![alt text](/img/recaptcha.jpg)
+![alt text](/images/recaptcha.jpg)
 
 There is a big hunt for good data sets. Large companies can reveal their algorithms, but datasets are extremly rare.
 
