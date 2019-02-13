@@ -1,8 +1,24 @@
 ---
 layout: default
-title: Sumeet's Blog
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Sumeet Bhadana!</h1>
-	<p>I'm Bengaluru-based Engineer at Semantics3.com. <a href="/blog">Read my <em>Blogs</em> here...</a></p>
+<style>
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+</style>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
 </div>

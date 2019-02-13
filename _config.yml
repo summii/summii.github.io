@@ -1,9 +1,46 @@
-name: Sumeet Bhadana
-markdown: kramdown
+name: Sumeet
+description:
 
+avatar:
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  email:
+  github: summii
+  linkedin: summii
+#  twitter: shrieko
+
+disqus: summii
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
+
+# Used for Sitemap.xml and your RSS feed
+url: http://summii.github.io
+
+permalink: /:title/
+
+# The release of Jekyll Now that you're using
+#version: v3.6.2
+
+# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
 
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
 
-permalink: /blog/:year/:month/:day/:title
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+- CNAME
