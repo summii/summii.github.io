@@ -9,10 +9,13 @@ Probability theory is nothing but common sense reduced to calculation. ... [Prob
 Now, lets decode the vocubulary words:
 
 *Trial*: A single occurence with an outcome that is uncertain until we observe it.
+
 For example, rolling a single die.
 
 *Outcome*: A possible result of a trial. One particular state of the world.
+
 Example: rolling a single die
+
 Example: 7
 
 *Sample Space*: The set of all possible outcomes for the trial.
