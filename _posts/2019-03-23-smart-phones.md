@@ -8,10 +8,11 @@ Recently i logged in to  my instagram account and first caption on my timeline:
 
 
 No one can deny the positive effects of mobile phones:
-	* Power to talk
-	* Taking pictures/Videos
-	* Games
-	* Music
+	
+* Power to talk
+* Taking pictures/Videos
+* Games
+* Music
 
 and obvisouly they are some problems too . Lets discuss some negative effects and seriousness of these problems.
 
