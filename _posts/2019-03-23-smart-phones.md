@@ -4,7 +4,7 @@ title: "Smart Phones"
 ---
 
 Recently i logged in to  my instagram account and first caption on my timeline:
-![alt text](/images/instagram caption.jpg)
+![alt text](/images/instagramcaption.jpg)
 
 
 No one can deny the positive effects of mobile phones:
