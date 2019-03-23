@@ -22,8 +22,18 @@ In my opinion, we have very few numbers of youth who are mature enough to self-r
 
 >I've avoided most addictions, but the Internet got me because it became addictive while I was using it. Most people I know have problems with Internet addiction. We're all trying to figure out our own customs for getting free of it. That's why I don't have an iPhone, for example; the last thing I want is for the Internet to follow me out into the world - Paul graham
 
-Teenager's sense of groupthink is a much bigger problem than just instagram.
+Teenager's sense of groupthink is a much bigger problem than just instagram. I can feel that in current generation youth demands individuality and freedom to pursue thei dreams and passions.
 
 
 
 ![alt text](/images/text123.jpg)
+
+Childrens are much happier if we force them to play outisde with their friends for an hour than watching videos on internet.
+
+
+References:
+- http://paulgraham.com/addiction.html
+- http://paulgraham.com/convergence.html
+- https://www.theatlantic.com/magazine/archive/2017/09/has-the-smartphone-destroyed-a-generation/534198/
+- https://www.telegraph.co.uk/news/2017/05/19/instagram-ranked-worst-social-network-young-peoples-mental-health/
+- https://en.wikipedia.org/wiki/Groupthink
