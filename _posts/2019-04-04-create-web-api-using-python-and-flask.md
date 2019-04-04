@@ -16,7 +16,7 @@ Web APIs are the tools for making information and application functionality acce
 If you have data that you want share with others, an API is one way to do it. However, APIs are not the best way of sharing the data with others. If the size of data you are providing is very small, it is better to provide them "data dump" in the form of JSON, XML, CSV or API as other option.
 
 
-## API Terminology
+## API Terminology:
 
 >HTTP (Hypertext Transfer Protocol)
 
@@ -127,6 +127,79 @@ def api_all():
 ```
 
 Run the code and visit [http://127.0.0.1:5000/api/v1/resources/books/all](http://127.0.0.1:5000/api/v1/resources/books/all) to view the data
+
+
+## Connecting Our API to a Database
+
+Now our API will pull in data from a database before providing it to a user. The database used is SQLite, a lightweight database engine that is supported in python by default.
+
+First [download the example database from this location]http://www.sqlitetutorial.net/sqlite-sample-database/ and extract it in project folder.
+
+
+```python
+from flask import Flask, request
+from flask_restful import Resource, Api
+from sqlalchemy import create_engine
+from json import dumps
+from flask.ext.jsonpify import jsonify
+
+db_connect = create_engine('sqlite:///chinook.db') # connect to the database
+app = Flask(__name__)
+api = Api(app)
+
+
+class Employees(Resource):
+	def get(self): 
+		conn = db_connect.connect() # connect to database
+		query = conn.execute("select * from employees") # This line performs query and returns json result
+		return {'employees': [i[0] for i in query.cursor.fetchall()]} 
+
+
+
+class Tracks(Resource):
+	def get(self):
+		conn = db_connect.connect() # connect to database
+		query = conn.execute("select trackid , name, composer, unitprice from tracks;") # This line performs query and returns json result
+		result = {'data': [dict(zip(tuple (query.keys()), i))for i in query.cursor]}
+		return jsonify(result) # Finally, we return the results of our executed SQL query as JSON to the user:
+
+
+class Employees_Name(Resource):
+	def get(self, employee_id):
+		conn = db_connect.connect() # connect to database
+		query = conn.execute("select * from employees where EmployeeId = %d" %int(employee_id)) # This line performs query and returns json result
+		result = {'data': [dict(zip(tuple (query.keys()) ,i)) for i in query.cursor]}
+		return jsonify(result) # Finally, we return the results of our executed SQL query as JSON to the user:
+
+
+class Track_Id(Resource):
+	def get(self, track_id):
+		conn = db_connect.connect() # connect to database
+		query = conn.execute("select * from tracks where TrackId = %d" %int(track_id)) # This line performs query and returns json result
+		result = {'data': [dict(zip(tuple (query.keys()),i)) for i in query.cursor]} 
+		return jsonify(result) # Finally, we return the results of our executed SQL query as JSON to the user:
+
+
+
+api.add_resource(Employees, '/employees') #  Route_1
+
+api.add_resource(Tracks, '/tracks') #  Route_2
+
+api.add_resource(Employees_Name, '/employees/<employee_id>') # Route_3
+
+api.add_resource(Track_Id, '/tracks/<track_id>') #  Route_4
+
+if __name__ == '__main__':
+     app.run()
+```
+
+Run the code and visit the following urls to check the data
+
+[http://127.0.0.1:5000/employees](http://127.0.0.1:5000/employees)
+[http://127.0.0.1:5000/employees/8](http://127.0.0.1:5000/employees/8)
+[http://127.0.0.1:5000/tracks](http://127.0.0.1:5000/tracks)
+[http://127.0.0.1:5000/tracks/23](http://127.0.0.1:5000/tracks/23)
+
 
 
 
