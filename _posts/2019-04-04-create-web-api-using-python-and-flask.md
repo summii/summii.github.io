@@ -133,7 +133,7 @@ Run the code and visit [http://127.0.0.1:5000/api/v1/resources/books/all](http:/
 
 Now our API will pull in data from a database before providing it to a user. The database used is SQLite, a lightweight database engine that is supported in python by default.
 
-First [download the example database from this location]http://www.sqlitetutorial.net/sqlite-sample-database/ and extract it in project folder.
+First [download the example database from this location](http://www.sqlitetutorial.net/sqlite-sample-database/) and extract it in project folder.
 
 
 ```python
