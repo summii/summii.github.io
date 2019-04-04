@@ -196,8 +196,11 @@ if __name__ == '__main__':
 Run the code and visit the following urls to check the data
 
 [http://127.0.0.1:5000/employees](http://127.0.0.1:5000/employees)
+
 [http://127.0.0.1:5000/employees/8](http://127.0.0.1:5000/employees/8)
+
 [http://127.0.0.1:5000/tracks](http://127.0.0.1:5000/tracks)
+
 [http://127.0.0.1:5000/tracks/23](http://127.0.0.1:5000/tracks/23)
 
 
