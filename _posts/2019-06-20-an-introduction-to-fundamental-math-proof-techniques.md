@@ -66,7 +66,7 @@ The statement 'not p' is called the negation of p and denoted '¬p' or '~p'
 
 	denoted by p => q ( p implies q)
 
-	If p is false, we say p => q is vacuously true. For example, if samosa is made up of bitter gourd and than modi is prime minister.
+If p is false, we say p => q is vacuously true. For example, if samosa is made up of bitter gourd and than modi is prime minister.
 
 The converse of p => q is true, q => p is not necessarily true.
 
