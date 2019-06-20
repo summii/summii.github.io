@@ -10,7 +10,7 @@ title: "Introduction to Fundamental Math Proof Techniques"
 
 ### Statements
 
-A mathematical statement is a statement that is either true of false, but not both.
+A mathematical statement is a statement that is either true or false, but not both.
 
 1) 6 is an even integer
 > It is a mathematical statement and true
@@ -21,7 +21,7 @@ A mathematical statement is a statement that is either true of false, but not bo
 3) Delhi is the capital of India
 > It is a mathematical statement and true
 
-4) Bnagalore is the best city in the world
+4) Bangalore is the best city in the world
 > Not a mathematical statement and we do not know(but i feel so)
 
 5) 2+2 = 5 
