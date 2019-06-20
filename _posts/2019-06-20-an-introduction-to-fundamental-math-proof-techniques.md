@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Web API using python and flask"
+title: "Introduction to Fundamental Math Proof Techniques"
 ---
 
-# Introduction to Fundamental Math Proof Techniques
+### Introduction to Fundamental Math Proof Techniques
 
 
 
@@ -32,8 +32,50 @@ A mathematical statement is a statement that is either true of false, but not bo
 
 In logic, there are operations for combining or modifying statements. Some of these operations are 'and', 'or', 'not' and 'if..then'.
 
-<mark>Not</mark> If 'p' is a statement, then 'not p' is defined to be:
+<mark>NOT</mark> If 'p' is a statement, then 'not p' is defined to be:
+
 	* true, when p is false
+
 	* false, when p is true
 
-The statement 'not p' is called the negation of p and denoted '$\neg$ p' or '~p'
+The statement 'not p' is called the negation of p and denoted '¬p' or '~p'
+
+
+<mark>AND</mark> If 'p' and 'q' are two statements then statement 'p and q' is defined to be:
+
+	* true, when both p and q are both true
+
+	* false, when p is false or q is false or both p and q are false
+
+	denoted by p ^ q
+
+<mark>OR</mark> If 'p' and 'q' are two statements, then the statement 'p or q' is defined to be:
+
+	* true, when p is true or q is true or both p and q are true
+
+	* false, when both p and q are false
+
+	denoted by p ∨ q
+
+
+<mark>If...Then</mark> If 'p' and 'q' are statements, then the statement 'if p then q' is defined to be:
+
+	* true, when both p and q are both true or p is false
+
+	* false, when both p and q are both true ir p is false
+
+	denoted by p => q
+
+	If p is false, we say p => q is vacuously true. For example, if samosa is made up of bitter gourd and than modi is prime minister.
+
+The converse of p => q is true, q => p is not necessarily true.
+
+If amit like all IPL cricket teams then he likes mumbai indians but if amit likes csk doesn't mean he likes all the IPL team.
+
+<mark>If and Only If</mark> If 'p'  and 'q' are statements, the the statement 'p if and only if q' is defined to be:
+
+	* true, when p and q are both true or both false
+
+	* false, when one of p, q is true and the other is false.
+
+	Denoted by p <=> q, when p <=> is true, we say that p and q equivalent.
