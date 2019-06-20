@@ -94,4 +94,4 @@ Note: These two statments are logically equivalent. That is, if one can prove 'p
 
 3) There exists an integer X such that X is even
 
-The phrases 'for every' and 'there exists' are called quantifiers. We use ∀ $\forall$ to denote "for all" and ∃ for "there exists".
+The phrases 'for every' and 'there exists' are called quantifiers. We use ∀ to denote "for all" and ∃ for "there exists".
