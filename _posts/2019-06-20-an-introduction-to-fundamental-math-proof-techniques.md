@@ -64,7 +64,7 @@ The statement 'not p' is called the negation of p and denoted '¬p' or '~p'
 
 	* false, when both p and q are both true ir p is false
 
-	denoted by p => q
+	denoted by p => q ( p implies q)
 
 	If p is false, we say p => q is vacuously true. For example, if samosa is made up of bitter gourd and than modi is prime minister.
 
@@ -79,3 +79,19 @@ If amit like all IPL cricket teams then he likes mumbai indians but if amit like
 	* false, when one of p, q is true and the other is false.
 
 	Denoted by p <=> q, when p <=> is true, we say that p and q equivalent.
+
+<mark>Contra-positive</mark> The contra-positive of the statement 'p => q' is: '¬q => ¬p'
+
+
+Note: These two statments are logically equivalent. That is, if one can prove 'p => q' means they also proved '¬q => ¬p' vice versa.
+
+
+<mark>QUANTIFIERS</mark> Consider: X is even, Note this is not a statement and we could modify this to make statement.
+
+1) when X=10, X is even
+
+2) For every integer X, X is even
+
+3) There exists an integer X such that X is even
+
+The phrases 'for every' and 'there exists' are called quantifiers. We use ∀ $\forall$ to denote "for all" and ∃ for "there exists".
