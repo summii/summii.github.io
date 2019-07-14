@@ -52,3 +52,45 @@ FCN(fully convolutional network) key features:
 Terms:
 
   - Upsampling is the process of inserting zero-valued samples between original samples to increase the sampling rate.
+
+  - FCN -32 : Directly produces the segmentation map from conv(last), by using a transposed convolution layer with stride 32
+
+  - FCN -16 : Sums the 2x upsampled prediction from conv with pool and produces the segmentation map, by using a transposed convolution layer with stride 16 on top of that.
+
+  - FCN-8: Sums the 2x upsampled conv with pool, upsample them with a stride 2 transposed convolution and sums them with pool3 and aaplied a transposed convolution layer
+
+  - stride - An interger or tuple/list of 2 interger
+
+  - Yield - Return sends a specified value back to its caller whereas yield can produce a sequence of values, The yield statement suspends function execution and sends a value back to caller, but retain enough state to enablefunction to resume.
+
+  - cv2.fillpoly - The function fillpoly fills an area bounded by several polygonal contours
+
+  - cv2.cvtcolor - convert color-space to another
+
+  - pts - array of polygons where each polygon is represented as an array of points
+
+  - npts - array of polygon vertex counters
+
+  - expand.dims - expand the shape of an arrya
+
+  - np.squeeze - remove single-dimensional entries from the shape of a array
+
+  - np.zeros - return a new array of given shape and type, filled with zeros
+
+  - Deconvolution layers allow the model to use every point with small image to "paint" a square in the larger one.
+
+  - deconvolution layer aka transposed convolution
+
+  - One apprach is to separate out upsampling to a higher resolution from convolution to compute the features
+
+  - Deconvolutional networks strive to find  lost feaatures the may have previously not been deemed important to convolutional network task.
+
+  - uppsampling refers to any technique that will, upsample your image to a higher resolution
+
+  - unpooling - reverse max pooling
+
+  - RMSprop - divide the learning rate for a weight by running average of magnitudes of recent gradients for that weight
+
+  - RMSprop is a gradient based optimization technique
+
+  - padding It’s an additional layer that we can add to the border of an image
