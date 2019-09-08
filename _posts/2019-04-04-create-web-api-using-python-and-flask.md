@@ -1,10 +1,5 @@
 ---
 layout: post
-title: "Web API using python and flask"
----
-
----
-layout: post
 title: Web API using python and flask
 description: API
 author: sumeet
