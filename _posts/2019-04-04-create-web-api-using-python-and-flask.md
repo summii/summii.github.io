@@ -3,8 +3,14 @@ layout: post
 title: "Web API using python and flask"
 ---
 
-
-### What is an API?
+---
+layout: post
+title: Web API using python and flask
+description: API
+author: sumeet
+use_math: true
+tags: [flask, python, api, tutorial]
+---
 
 Web APIs are the tools for making information and application functionality accesible over the internet.
 

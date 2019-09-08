@@ -1,7 +1,12 @@
 ---
 layout: post
-title: "Machine Learning for Everyone"
+title: Machine Learning for Everyone
+description: Machine learning
+author: sumeet
+use_math: true
+tags: [machine learning, python, beginners]
 ---
+
 We Understand Simple Words
 
 Machine Learning is like a new drug in a city. Now a days everyone talks about it in the corners and only few able to get it. In my past year, articles about machine learning

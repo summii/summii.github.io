@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Introduction to Fundamental Math Proof Techniques"
+title: Introduction to Fundamental Math Proof Techniques
+description: Proof Techniques
+author: sumeet
+use_math: true
+tags: [math, learning, proof techniques]
 ---
 
-### Introduction to Fundamental Math Proof Techniques
-
-
-
+Introduction to Fundamental Math Proof Techniques
 
 ### Statements
 

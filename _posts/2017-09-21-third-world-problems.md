@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "Third World Problems-Part 1"
+title: Third World Problems-Part 1
+description: Education aaproach
+author: sumeet
 ---
 The system of education is in crisis. We do not have money to pay school teachers but we want to computerized the education sector.
 We are becoming more of business hub for first world countries. I am not advocating against use of technology in education sector, however, that there has been too much use of technology in education sector. Childrens who are using technology from an early age

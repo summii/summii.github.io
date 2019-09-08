@@ -1,6 +1,10 @@
 ---
 layout: post
-title: "Probability for Everyone[Math]"
+title: Probability for Everyone
+description: Math
+author: sumeet
+use_math: true
+tags: [matg, python, probability]
 ---
 In 1884, peirre-simon laplace wrote:
 
