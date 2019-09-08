@@ -2,7 +2,7 @@ markdown: kramdown
 title: "Sumeet's Blog"
 description: "machine learning information"
 theme: jekyll-theme-minimal
-url: https://poorandfunny.com
+url: https://summii.github.io
 repository_url: starkdg/summii.github.io
 permalink: /posts/:title
 email: sumeetbhadana99@gmail.com
