@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Third World Problems-Part 1
-description: Education aaproach
+description: Education system
 author: sumeet
 ---
 The system of education is in crisis. We do not have money to pay school teachers but we want to computerized the education sector.
