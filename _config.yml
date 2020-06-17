@@ -1,13 +1,11 @@
-markdown: kramdown
-title: "Sumeet's Blog"
-description: "machine learning information"
-theme: jekyll-theme-minimal
-url: https://summii.github.io
-repository_url: summii/summii.github.io
-permalink: /posts/:title
-email: sumeetbhadana99@gmail.com
-show_downloads: false
-
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+    - jekyll-feed
+
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+name: "solutions"
+description: "simple blog for internet"
+author: "sumeet"
