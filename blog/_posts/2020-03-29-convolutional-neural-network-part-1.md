@@ -7,10 +7,13 @@ use_math: true
 tags: [machine learning, python, neural network, beginner]
 ---
 
-Covolution: A feed forward neural network can be thought of as the composition od number of functions:
-				𝑓(𝐱)=𝑓𝐿(…𝑓2(𝑓1(𝐱;𝐰1);𝐰2)…),𝐰𝐿).
+Covolution: A feed forward neural network can be thought of as the composition of number of functions:
 
-One of the property of `CNN` is that the functions 𝑓 have a convolutional structure. This mean that 𝑓 applies to the input map x and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
+$$
+f(\bx) = f_L(\dots f_2(f_1(\bx;\bw_1);\bw_2)\dots),\bw_{L}).
+$$
+
+One of the property of `CNN` is that the functions $f_l$ have a convolutional structure. This mean that 𝑓 applies to the input map x and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
 
 Let us try out now.
 
