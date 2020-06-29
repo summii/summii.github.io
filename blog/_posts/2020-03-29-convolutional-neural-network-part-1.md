@@ -15,7 +15,7 @@ f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L}).
 
 
 
-One of the property of `CNN` is that the functions \begin{align}f_l\end{align} have a convolutional structure. This mean that \begin{align}𝑓_l\end{align}applies to the input map \begin{align}x_l\end{align} and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
+One of the property of `CNN` is that the functions\begin{align}f_l\end{align}have a convolutional structure. This mean that \begin{align}𝑓_l\end{align}applies to the input map \begin{align}x_l\end{align} and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
 
 Let us try out now.
 
