@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Covolutional Neural Network
+title: Covolutional Neural Network Part-1
 description: Covolutional Neural Network
 author: sumeet
 use_math: true
@@ -21,7 +21,7 @@ import lab
 from matplotlib import pyplot as plt
 
 # Read an image as a PyTorch tensor
-x = lab.imread('data/peppers.png')
+x = lab.imread('<path to image>')
 
 # Visualize the input x
 plt.figure(1, figsize=(12,12))
@@ -34,7 +34,7 @@ print(f"The image tensor shape is {list(x.shape)}")
 print(f"The image tensor type is {x.dtype}")
 ```
 
-![alt text](/assets/images/20.png)
+![alt text](/blog/assets/images/20.png)
 
 Let us create a bank of 10 linear filters each dimension 3*5*5.
 
@@ -48,7 +48,7 @@ w = torch.randn(10,3,5,5)
 plt.figure(1, figsize=(12,12))
 lab.imarraysc(w, spacing=1) ;
 ```
-![alt text](/assets/images/21.png)
+![alt text](/blog/assets/images/21.png)
 
 The next step is applying the filter to the image using `conv2d` function from `torch.nn.functional`
 
@@ -69,7 +69,7 @@ fig = plt.figure(figsize=(15,10))
 lab.imarraysc(lab.t2im(y));
 ```
 
-![alt text](/assets/images/22.png)
+![alt text](/blog/assets/images/22.png)
 
 
 Note that filters preserve the resolution of the input feature map. However, it is often useful to downsample the output. This can be obtained by using stride option in `conv2d`. 
@@ -81,7 +81,7 @@ plt.figure(figsize=(15,10))
 lab.imarraysc(lab.t2im(y_ds));
 ```
 
-![alt text](/assets/images/23.png)
+![alt text](/blog/assets/images/23.png)
 
 Note also that applying a filter to an image or fetaure map interacts with boundaries, we can pad unput array with zeros by using `padding` option.
 
@@ -92,7 +92,7 @@ plt.figure(figsize=(15,10))
 lab.imarraysc(lab.t2im(y_ds));
 ```
 
-![alt text](assets/images/24.png)
+![alt text](/blog/assets/images/24.png)
 
 Try changing padding value to see the difference between above too images.
 
@@ -121,6 +121,6 @@ plt.figure(2, figsize=(12,12))
 lab.imsc(abs(y_lap[0]));
 ```
 
-![alt text](/assets/images/25.png)
+![alt text](/blog/assets/images/25.png)
 
-![alt text](/assets/images/26.png)
+![alt text](/blog/assets/images/26.png)
