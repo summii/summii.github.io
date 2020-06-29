@@ -13,6 +13,9 @@ $$
 f(\bx) = f_L(\dots f_2(f_1(\bx;\bw_1);\bw_2)\dots),\bw_{L}).
 $$
 
+When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+
 One of the property of `CNN` is that the functions $f_l$ have a convolutional structure. This mean that 𝑓 applies to the input map x and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
 
 Let us try out now.
