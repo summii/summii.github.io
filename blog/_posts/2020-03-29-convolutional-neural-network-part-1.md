@@ -9,8 +9,9 @@ tags: [machine learning, python, neural network, beginner]
 
 Covolution: A feed forward neural network can be thought of as the composition of number of functions:
 
-<p>
-f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L})..
+\begin{align}
+f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L}).
+\end{align}
 
 </p>
 <p>\[P(E) = {n \choose k} p^k (1-p)^{ n-k} \]</p>
