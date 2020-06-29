@@ -65,7 +65,6 @@ y = F.conv2d(x, w)
 print(f"The output shape is {y.shape}")
 
 #We can now visualise the output y of the convolution. 
-#In order to do this, use the provided lab.imarraysc function to display an image for each feature channel in y
 fig = plt.figure(figsize=(15,10))
 
 #Visulaize the output image, one channel per image
