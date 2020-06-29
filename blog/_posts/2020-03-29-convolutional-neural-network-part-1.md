@@ -11,7 +11,9 @@ Covolution: A feed forward neural network can be thought of as the composition o
 
 <p>
 f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L})..
+
 </p>
+<p>\[P(E) = {n \choose k} p^k (1-p)^{ n-k} \]</p>
 
 
 One of the property of `CNN` is that the functions f_l have a convolutional structure. This mean that 𝑓_l applies to the input map x_l and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
