@@ -200,7 +200,7 @@ The gradient is a multi-variable generalization of the derivative. It is a vecto
 
 Training CNNs is normally done using a gradient-based optimization method. The CNN $f$ is the composition of $L$ layers $f_l$ each with parameters $\bw_l$, which in the simplest case of a chain looks like:
 
-
+<p>
  \bx_0
  \longrightarrow
  \underset{\displaystyle\underset{\displaystyle\bw_1}{\uparrow}}{\boxed{f_1}}
@@ -218,6 +218,7 @@ Training CNNs is normally done using a gradient-based optimization method. The C
  \underset{\displaystyle\underset{\displaystyle\bw_L}{\uparrow}}{\boxed{f_L}}
  \longrightarrow
  \bx_L
+</p>
 
 During learning, the last layer of the network is the *loss function* that should be minimized. Hence, the output $\bx_L = x_L$ of the network is a **scalar** quantity (a single number).
 
