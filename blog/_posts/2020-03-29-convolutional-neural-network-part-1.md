@@ -7,7 +7,7 @@ use_math: true
 tags: [machine learning, python, neural network, beginner]
 ---
 
-Convolution is a mathematical operation on two functions (f and g) that produces a third function expressing how the shape of one is modified by the other. The term convolution refers to both the result function and to the process of computing it. It is defined as the integral of the product of the two functions after one is reversed and shifted (The convolution of f and g is written f∗g). And the integral is evaluated for all values of shift, producing the convolution function [Source](https://en.wikipedia.org/wiki/Convolution).
+[Convolution](https://en.wikipedia.org/wiki/Convolution) is a mathematical operation on two functions (f and g) that produces a third function expressing how the shape of one is modified by the other. The term convolution refers to both the result function and to the process of computing it. It is defined as the integral of the product of the two functions after one is reversed and shifted (The convolution of f and g is written f∗g). And the integral is evaluated for all values of shift, producing the convolution function.
 
 A feed forward neural network can be thought of as the composition of number of functions:
 
@@ -184,4 +184,51 @@ lab.imarraysc(lab.t2im(y_nrm));
 ```
 
 ![alt text](/blog/assets/images/210.png)
+
+## Back-propagation and derivatives
+
+We have so far discussed the convolutional operators. We haven’t yet discussed how we learn the parameters of the networks i.e, weights and biases of the layers.
+
+### Derivative
+
+Derivative of function measures sensitivity of change in fucntion value (output value) with respect to a change in its argument (input value).
+
+### Gradient
+
+The gradient is a multi-variable generalization of the derivative. It is a vector valued function.
+
+
+Training CNNs is normally done using a gradient-based optimization method. The CNN $f$ is the composition of $L$ layers $f_l$ each with parameters $\bw_l$, which in the simplest case of a chain looks like:
+
+
+ \bx_0
+ \longrightarrow
+ \underset{\displaystyle\underset{\displaystyle\bw_1}{\uparrow}}{\boxed{f_1}}
+ \longrightarrow
+ \bx_1
+ \longrightarrow
+ \underset{\displaystyle\underset{\displaystyle\bw_2}{\uparrow}}{\boxed{f_2}}
+ \longrightarrow
+ \bx_2
+ \longrightarrow
+ \dots
+ \longrightarrow
+ \bx_{L-1}
+ \longrightarrow
+ \underset{\displaystyle\underset{\displaystyle\bw_L}{\uparrow}}{\boxed{f_L}}
+ \longrightarrow
+ \bx_L
+
+During learning, the last layer of the network is the *loss function* that should be minimized. Hence, the output $\bx_L = x_L$ of the network is a **scalar** quantity (a single number).
+
+The gradient is easily computed using using the **chain rule**. If *all* network variables and parameters are scalar, this is given by:
+
+
+ \frac{\partial f}{\partial w_l}(x_0;w_1,\dots,w_L)
+ =
+ \frac{\partial f_L}{\partial x_{L-1}}(x_{L-1};w_L) \times
+ \cdots
+ \times
+ \frac{\partial f_{l+1}}{\partial x_l}(x_l;w_{l+1}) \times
+ \frac{\partial f_{l}}{\partial w_l}(x_{l-1};w_l)
 
