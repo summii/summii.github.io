@@ -7,7 +7,9 @@ use_math: true
 tags: [machine learning, python, neural network, beginner]
 ---
 
-Covolution: A feed forward neural network can be thought of as the composition of number of functions:
+Convolution is a mathematical operation on two functions (f and g) that produces a third function expressing how the shape of one is modified by the other. The term convolution refers to both the result function and to the process of computing it. It is defined as the integral of the product of the two functions after one is reversed and shifted (The convolution of f and g is written f∗g). And the integral is evaluated for all values of shift, producing the convolution function [Source](https://en.wikipedia.org/wiki/Convolution).
+
+A feed forward neural network can be thought of as the composition of number of functions:
 
 \begin{align}
 f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L}).
@@ -15,9 +17,10 @@ f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L}).
 
 
 
-One of the property of `CNN` is that the functions f(l) have a convolutional structure. This mean that 𝑓(l) applies to the input map x(l) and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. The first one is regular linear convolution.
+One of the property of `CNN` is that the functions f(l) have a convolutional structure. This mean that 𝑓(l) applies to the input map x(l) and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. 
 
-Let us try out now.
+The first one is regular linear convolution.
+
 
 Supported code to run this practical can be found [here](https://gist.github.com/summii/095567d9cbb9b7daf79e28c2d79d2579)
 
@@ -128,3 +131,57 @@ lab.imsc(abs(y_lap[0]));
 ![alt text](/blog/assets/images/25.png)
 
 ![alt text](/blog/assets/images/26.png)
+
+## Non-linear Activation Functions
+
+Let us try out non-linear operators as well. 
+
+The simplest non-linearity is obtained by following a linear filter by a non-linear activation function, applied identically to each component (i.e. point-wise) of a feature map. The simplest such function is the Rectified Linear Unit (ReLU).
+
+```python
+#Initialize a filter
+w = torch.Tensor([1, 0, -1])[None,None,:].expand(1,3,3,3)
+
+#Convolution
+y = F.conv2d(x,w)
+
+#Relu
+z = F.relu(y)
+
+plt.figure(1, figsize=(12,12))
+lab.imsc(y[0]);
+
+plt.figure(2, figsize=(12,12))
+lab.imsc(z[0]);
+```
+
+![alt text](/blog/assets/images/27.png)
+![alt text](/blog/assets/images/28.png)
+
+## Pooling
+
+A pooling operator operates on individual feature channels, coalescing nearby feature values into one by the application of a suitable operator. Common choices include max-pooling (using the max operator) or sum-pooling (using summation).
+
+```python
+y = F.max_pool2d(x, 15)
+
+plt.figure(1, figsize=(12,12))
+lab.imarraysc(lab.t2im(y));
+```
+
+![alt text](/blog/assets/images/29.png)
+
+## Normalisation
+
+This operator normalises the vector of feature channels at each spatial location in the input map 𝐱.
+
+```python
+#Normalisation
+y_nrm = F.local_response_norm(x, 5, alpha=5, beta=0.5, k=0)
+
+plt.figure(1, figsize=(12,12))
+lab.imarraysc(lab.t2im(y_nrm));
+```
+
+![alt text](/blog/assets/images/210.png)
+
