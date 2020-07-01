@@ -185,7 +185,7 @@ lab.imarraysc(lab.t2im(y_nrm));
 
 ![alt text](/blog/assets/images/210.png)
 
-## Back-propagation and derivatives
+## Back-propogation and derivatives
 
 We have so far discussed the convolutional operators. We haven’t yet discussed how we learn the parameters of the networks i.e, weights and biases of the layers.
 
@@ -193,43 +193,8 @@ We have so far discussed the convolutional operators. We haven’t yet discussed
 
 Derivative of function measures sensitivity of change in fucntion value (output value) with respect to a change in its argument (input value).
 
-### Gradient
+I will skip this portion for now. If you want learn more about Backpropagation and derivatives, please visit [here](http://colah.github.io/posts/2015-08-Backprop/) and [here](http://neuralnetworksanddeeplearning.com/chap2.html)
 
-The gradient is a multi-variable generalization of the derivative. It is a vector valued function.
+In the next part, We will try to build an tiny `CNN` model.
 
-
-Training CNNs is normally done using a gradient-based optimization method. The CNN $f$ is the composition of $L$ layers $f_l$ each with parameters $\bw_l$, which in the simplest case of a chain looks like:
-
-<p>
- \bx_0
- \longrightarrow
- \underset{\displaystyle\underset{\displaystyle\bw_1}{\uparrow}}{\boxed{f_1}}
- \longrightarrow
- \bx_1
- \longrightarrow
- \underset{\displaystyle\underset{\displaystyle\bw_2}{\uparrow}}{\boxed{f_2}}
- \longrightarrow
- \bx_2
- \longrightarrow
- \dots
- \longrightarrow
- \bx_{L-1}
- \longrightarrow
- \underset{\displaystyle\underset{\displaystyle\bw_L}{\uparrow}}{\boxed{f_L}}
- \longrightarrow
- \bx_L
-</p>
-
-During learning, the last layer of the network is the *loss function* that should be minimized. Hence, the output $\bx_L = x_L$ of the network is a **scalar** quantity (a single number).
-
-The gradient is easily computed using using the **chain rule**. If *all* network variables and parameters are scalar, this is given by:
-
-
- \frac{\partial f}{\partial w_l}(x_0;w_1,\dots,w_L)
- =
- \frac{\partial f_L}{\partial x_{L-1}}(x_{L-1};w_L) \times
- \cdots
- \times
- \frac{\partial f_{l+1}}{\partial x_l}(x_l;w_{l+1}) \times
- \frac{\partial f_{l}}{\partial w_l}(x_{l-1};w_l)
 
