@@ -247,4 +247,7 @@ A special kind of activation layer, usually at the end of FC layer outputs. A so
 
 In the next [part](https://summii.github.io/blog/2020/04/07/convolutional-neural-network-part-2.html), We will try to build an tiny `CNN` model.
 
+Reference:
+- https://web.stanford.edu/class/cs231a/lectures/intro_cnn.pdf
+
 
