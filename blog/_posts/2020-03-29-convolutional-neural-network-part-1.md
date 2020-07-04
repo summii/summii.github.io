@@ -9,19 +9,19 @@ tags: [machine learning, python, neural network, beginner]
 
 Understanding the fundamentals of `CNN` can be hard to undestand. I find it difficult to meaningfully understand a system without knowing how everything fits together. Hence, the purpose of this blog is to explain through simple peices of code, how CNN works.
 
-From a very top, This is how `CNN` works.
+From a very top, This is how **CNN** works.
 
 ![CNN architecture](/blog/assets/images/00.png)
 
-A `CNN` is a neural network. An algorithm used to recognize patterns in data. Neural network in general are composed os a collection of neurons that are organized in layers, each with their own learnable weights and biases.
+A **CNN** is a neural network. An algorithm used to recognize patterns in data. Neural network in general are composed os a collection of neurons that are organized in layers, each with their own learnable weights and biases.
 
-###What does each layer of network do?
+### What does each layer of network do?
 
 Let's walk through each layer in the network:
 
-Input layer: The input layer represents the input image into `CNN`. The input layer has channels, corresponding to RGB.
+**Input layer**: The input layer represents the input image into `CNN`. The input layer has channels, corresponding to RGB.
 
-Convolution layer: The covolution layers are the foundation of CNN, as they contain the learned kernels(weights), which extract features that distinguish different images from one another.
+**Convolution layer**: The covolution layers are the foundation of CNN, as they contain the learned kernels(weights), which extract features that distinguish different images from one another.
 
 [Convolution](https://en.wikipedia.org/wiki/Convolution) is a mathematical operation on two functions (f and g) that produces a third function expressing how the shape of one is modified by the other.
 
@@ -38,7 +38,7 @@ Filter weights are shared across receptive fields. The filter has same number of
 
 In simple terms, a convolution of image A and Filter B describes to what degree A is "like" B. Here "Filter B" is a kernel, ie., a parameter set learnt by the network.
 
-Features:
+**Features**:
 
 They accepts a volume of size W * H * D.
 
@@ -48,15 +48,15 @@ Requires four hyperarameters:
 	- the stride
 	- the amount of zero padding
 
-`Padding` is often necessary when the kernel extends beyond the activation map. Padding conserves data at the borders of activation maps.
+**Padding** is often necessary when the kernel extends beyond the activation map. Padding conserves data at the borders of activation maps.
 
-`kernel size` is dimension of the window over input.
+**kernel size** is dimension of the window over input.
 
-`stride` indicates how many pixels the kernel should be shifted over at a time.
+**stride** indicates how many pixels the kernel should be shifted over at a time.
 
-`Hyperparameter` an aspect of the algorithm, a dial which changes model production.
+**Hyperparameter** an aspect of the algorithm, a dial which changes model production.
 
-`Parameter` an aspect of the model, a dial which is fixed by data.
+**Parameter** an aspect of the model, a dial which is fixed by data.
 
 
 
@@ -179,9 +179,9 @@ lab.imsc(abs(y_lap[0]));
 
 Let us try out non-linear operators as well. 
 
-The simplest non-linearity is obtained by following a linear filter by a non-linear activation function, applied identically to each component (i.e. point-wise) of a feature map. The simplest such function is the Rectified Linear Unit (ReLU).
+The simplest non-linearity is obtained by following a linear filter by a non-linear activation function, applied identically to each component (i.e. point-wise) of a feature map. The simplest such function is the **Rectified Linear Unit** (ReLU).
 
-ReLU: Most of the modern CNNs perform on highest level because:
+**ReLU**: Most of the modern CNNs perform on highest level because:
 
 - They consist of an absurd amount of layers, which are able to learn more and moe features.
 
