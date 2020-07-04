@@ -85,8 +85,7 @@ print(f"The image tensor shape is {list(x.shape)}")
 # Show the data type of the tensor
 print(f"The image tensor type is {x.dtype}")
 ```
-
-![alt text](/blog/assets/images/20.png)
+[comment]: <> (![alt text] /blog/assets/images/20.png)
 
 Let us create a bank of 10 linear filters each dimension 3*5*5.
 
@@ -100,7 +99,7 @@ w = torch.randn(10,3,5,5)
 plt.figure(1, figsize=(12,12))
 lab.imarraysc(w, spacing=1) ;
 ```
-![alt text](/blog/assets/images/21.png)
+[comment]: <> (![alt text] /blog/assets/images/21.png)
 
 The next step is applying the filter to the image using `conv2d` function from `torch.nn.functional`
 
@@ -119,8 +118,7 @@ fig = plt.figure(figsize=(15,10))
 #Visulaize the output image, one channel per image
 lab.imarraysc(lab.t2im(y));
 ```
-
-![alt text](/blog/assets/images/22.png)
+[comment]: <> (![alt text] /blog/assets/images/22.png)
 
 
 Note that filters preserve the resolution of the input feature map. However, it is often useful to downsample the output. This can be obtained by using stride option in `conv2d`. 
