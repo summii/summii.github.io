@@ -43,6 +43,7 @@ In simple terms, a convolution of image A and Filter B describes to what degree 
 They accepts a volume of size W * H * D.
 
 Requires four hyperarameters:
+
 	- Number of filters
 	- their spatial extent
 	- the stride
