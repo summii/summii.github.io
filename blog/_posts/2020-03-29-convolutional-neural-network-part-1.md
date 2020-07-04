@@ -7,7 +7,24 @@ use_math: true
 tags: [machine learning, python, neural network, beginner]
 ---
 
-[Convolution](https://en.wikipedia.org/wiki/Convolution) is a mathematical operation on two functions (f and g) that produces a third function expressing how the shape of one is modified by the other. The term convolution refers to both the result function and to the process of computing it. It is defined as the integral of the product of the two functions after one is reversed and shifted (The convolution of f and g is written f∗g). And the integral is evaluated for all values of shift, producing the convolution function.
+Understanding the fundamentals of `CNN` can be hard to undestand. I find it difficult to meaningfully understand a system without knowing how everything fits together. Hence, the purpose of this blog is to explain through simple peices of code, how CNN works.
+
+From a very top, This is how `CNN` works.
+
+![CNN architecture](/blog/assets/images/00.png)
+
+A `CNN` is a neural network. An algorithm used to recognize patterns in data. Neural network in general are composed os a collection of neurons that are organized in layers, each with their own learnable weights and biases.
+
+###What does each layer of network do?
+
+Let's walk through each layer in the network:
+
+Input layer: The input layer represents the input image into `CNN`. The input layer has channels, corresponding to RGB.
+
+Convolution layer: The covolution layers are the foundation of CNN, as they contain the learned kernels(weights), which extract features that distinguish different images from one another.
+
+[Convolution](https://en.wikipedia.org/wiki/Convolution) is a mathematical operation on two functions (f and g) that produces a third function expressing how the shape of one is modified by the other.
+
 
 A feed forward neural network can be thought of as the composition of number of functions:
 
@@ -15,11 +32,37 @@ A feed forward neural network can be thought of as the composition of number of 
 f(x) = f_L(\dots f_2(f_1(x;w_1);w_2)\dots),w_{L}).
 \end{align}
 
+The "dot products" between weights and inputs are "integrated" across channel.
+
+Filter weights are shared across receptive fields. The filter has same number of layers as input volume channels, and output volume has some "depth" as the number of filters.
+
+In simple terms, a convolution of image A and Filter B describes to what degree A is "like" B. Here "Filter B" is a kernel, ie., a parameter set learnt by the network.
+
+Features:
+
+They accepts a volume of size W * H * D.
+
+Requires four hyperarameters:
+	- Number of filters
+	- their spatial extent
+	- the stride
+	- the amount of zero padding
+
+`Padding` is often necessary when the kernel extends beyond the activation map. Padding conserves data at the borders of activation maps.
+
+`kernel size` is dimension of the window over input.
+
+`stride` indicates how many pixels the kernel should be shifted over at a time.
+
+`Hyperparameter` an aspect of the algorithm, a dial which changes model production.
+
+`Parameter` an aspect of the model, a dial which is fixed by data.
 
 
-One of the property of `CNN` is that the functions f(l) have a convolutional structure. This mean that 𝑓(l) applies to the input map x(l) and operator that is local and translation in variant. Examples of convolutional operators are applying a bank of linear filters to x. 
 
-The first one is regular linear convolution.
+Let's try out few of above features on an image using `PyTorch`
+
+
 
 
 Supported code to run this practical can be found [here](https://gist.github.com/summii/095567d9cbb9b7daf79e28c2d79d2579)
@@ -132,11 +175,29 @@ lab.imsc(abs(y_lap[0]));
 
 ![alt text](/blog/assets/images/26.png)
 
-## Non-linear Activation Functions
+## Activation Functions
 
 Let us try out non-linear operators as well. 
 
 The simplest non-linearity is obtained by following a linear filter by a non-linear activation function, applied identically to each component (i.e. point-wise) of a feature map. The simplest such function is the Rectified Linear Unit (ReLU).
+
+ReLU: Most of the modern CNNs perform on highest level because:
+
+- They consist of an absurd amount of layers, which are able to learn more and moe features.
+
+- their non-linearity
+
+ReLU applies much needed non-linearity into the model without affecting receptive fields of convolution layers. Non-linearity is necesary to produce non-linear decision boundaries, so that the output cannot be written as a linear combination of inputs. CNNs using ReLU are faster to train than their counterparts. The activation function is applied elemnetwise on every value from the input tensor. For example, if applied ReLU on the value 2.24, the result would be 2.24, since 2.24 is larger than 0.
+
+
+## Pooling
+
+A pooling operator operates on individual feature channels, coalescing nearby feature values into one by the application of a suitable operator. Common choices include max-pooling (using the max operator) or sum-pooling (using summation). The max-pooling operation requires selecting a kernel size and a stride length during architecture design.
+
+## Flatten layer
+
+This layer converts a three-dimensional layer in the neural network into a one-dimesional vector to fit the input of a fully connected layer for classification. For example, a 5*2*2 tensor would be converted into a vector of size 50. We will use the softmax function to classify these features which requires a one-dimensional input. This is why flatten layer is necessary.
+
 
 ```python
 #Initialize a filter
@@ -158,9 +219,6 @@ lab.imsc(z[0]);
 ![alt text](/blog/assets/images/27.png)
 ![alt text](/blog/assets/images/28.png)
 
-## Pooling
-
-A pooling operator operates on individual feature channels, coalescing nearby feature values into one by the application of a suitable operator. Common choices include max-pooling (using the max operator) or sum-pooling (using summation).
 
 ```python
 y = F.max_pool2d(x, 15)
@@ -171,9 +229,7 @@ lab.imarraysc(lab.t2im(y));
 
 ![alt text](/blog/assets/images/29.png)
 
-## Normalisation
 
-This operator normalises the vector of feature channels at each spatial location in the input map 𝐱.
 
 ```python
 #Normalisation
@@ -185,16 +241,10 @@ lab.imarraysc(lab.t2im(y_nrm));
 
 ![alt text](/blog/assets/images/210.png)
 
-## Back-propogation and derivatives
+## Softmax
 
-We have so far discussed the convolutional operators. We haven’t yet discussed how we learn the parameters of the networks i.e, weights and biases of the layers.
+A special kind of activation layer, usually at the end of FC layer outputs. A softmax operation serves a key purpose, making sure CNN outputs sum to 1. Because of this, softmax operations are useful to scale model outputs into probabilities.
 
-### Derivative
-
-Derivative of function measures sensitivity of change in fucntion value (output value) with respect to a change in its argument (input value).
-
-I will skip this portion for now. If you want learn more about Backpropagation and derivatives, please visit [here](http://colah.github.io/posts/2015-08-Backprop/) and [here](http://neuralnetworksanddeeplearning.com/chap2.html)
-
-In the next part, We will try to build an tiny `CNN` model.
+In the next [part](https://summii.github.io/blog/2020/04/07/convolutional-neural-network-part-2.html), We will try to build an tiny `CNN` model.
 
 
