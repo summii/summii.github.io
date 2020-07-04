@@ -85,6 +85,7 @@ print(f"The image tensor shape is {list(x.shape)}")
 # Show the data type of the tensor
 print(f"The image tensor type is {x.dtype}")
 ```
+
 [comment]: <> (![alt text] /blog/assets/images/20.png)
 
 Let us create a bank of 10 linear filters each dimension 3*5*5.
@@ -99,6 +100,7 @@ w = torch.randn(10,3,5,5)
 plt.figure(1, figsize=(12,12))
 lab.imarraysc(w, spacing=1) ;
 ```
+
 [comment]: <> (![alt text] /blog/assets/images/21.png)
 
 The next step is applying the filter to the image using `conv2d` function from `torch.nn.functional`
@@ -118,36 +120,37 @@ fig = plt.figure(figsize=(15,10))
 #Visulaize the output image, one channel per image
 lab.imarraysc(lab.t2im(y));
 ```
+
 [comment]: <> (![alt text] /blog/assets/images/22.png)
 
 
 Note that filters preserve the resolution of the input feature map. However, it is often useful to downsample the output. This can be obtained by using stride option in `conv2d`. 
 
-```python
+```py
 # downsample output image using stride
 y_ds = F.conv2d(x,w, stride=16)
 plt.figure(figsize=(15,10))
 lab.imarraysc(lab.t2im(y_ds));
 ```
 
-![alt text](/blog/assets/images/23.png)
+[comment]: <> (![alt text](/blog/assets/images/23.png)
 
 Note also that applying a filter to an image or fetaure map interacts with boundaries, we can pad unput array with zeros by using `padding` option.
 
-```python
+```py
 #downsample using padding
 y_ds = F.conv2d(x,w, padding=8)
 plt.figure(figsize=(15,10))
 lab.imarraysc(lab.t2im(y_ds));
 ```
 
-![alt text](/blog/assets/images/24.png)
+[comment]: <> (![alt text](/blog/assets/images/24.png)
 
 Try changing padding value to see the difference between above too images.
 
 Now we will design a filter from scratch.
 
-```python
+```py
 #Initialize a filter
 w = torch.Tensor([
     [0,  1, 0 ],
@@ -170,9 +173,9 @@ plt.figure(2, figsize=(12,12))
 lab.imsc(abs(y_lap[0]));
 ```
 
-![alt text](/blog/assets/images/25.png)
+[comment]: <> (![alt text](/blog/assets/images/25.png)
 
-![alt text](/blog/assets/images/26.png)
+[comment]: <> (![alt text](/blog/assets/images/26.png)
 
 ## Activation Functions
 
@@ -215,8 +218,8 @@ plt.figure(2, figsize=(12,12))
 lab.imsc(z[0]);
 ```
 
-![alt text](/blog/assets/images/27.png)
-![alt text](/blog/assets/images/28.png)
+[comment]: <> (![alt text](/blog/assets/images/27.png)
+[comment]: <> (![alt text](/blog/assets/images/28.png)
 
 
 ```python
@@ -226,7 +229,7 @@ plt.figure(1, figsize=(12,12))
 lab.imarraysc(lab.t2im(y));
 ```
 
-![alt text](/blog/assets/images/29.png)
+[comment]: <> (![alt text](/blog/assets/images/29.png)
 
 
 
@@ -238,7 +241,7 @@ plt.figure(1, figsize=(12,12))
 lab.imarraysc(lab.t2im(y_nrm));
 ```
 
-![alt text](/blog/assets/images/210.png)
+[comment]: <> (![alt text](/blog/assets/images/210.png)
 
 ## Softmax
 
