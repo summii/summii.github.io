@@ -15,9 +15,8 @@ From a very top, This is how **CNN** works.
 
 A **CNN** is a neural network. An algorithm used to recognize patterns in data. Neural network in general are composed os a collection of neurons that are organized in layers, each with their own learnable weights and biases.
 
-### What does each layer of network do?
+# What does each layer of network do?
 
-Let's walk through each layer in the network:
 
 **Input layer**: The input layer represents the input image into `CNN`. The input layer has channels, corresponding to RGB.
 
@@ -44,10 +43,10 @@ They accepts a volume of size W * H * D.
 
 Requires four hyperarameters:
 
-	- Number of filters
-	- their spatial extent
-	- the stride
-	- the amount of zero padding
+- Number of filters
+- their spatial extent
+- the stride
+- the amount of zero padding
 
 **Padding** is often necessary when the kernel extends beyond the activation map. Padding conserves data at the borders of activation maps.
 
@@ -88,6 +87,7 @@ print(f"The image tensor type is {x.dtype}")
 
 [comment]: <> (![alt text] /blog/assets/images/20.png)
 
+
 Let us create a bank of 10 linear filters each dimension 3*5*5.
 
 ```python
@@ -102,6 +102,7 @@ lab.imarraysc(w, spacing=1) ;
 ```
 
 [comment]: <> (![alt text] /blog/assets/images/21.png)
+
 
 The next step is applying the filter to the image using `conv2d` function from `torch.nn.functional`
 
@@ -145,6 +146,7 @@ lab.imarraysc(lab.t2im(y_ds));
 ```
 
 [comment]: <> (![alt text](/blog/assets/images/24.png)
+
 
 Try changing padding value to see the difference between above too images.
 
