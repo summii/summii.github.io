@@ -100,3 +100,19 @@ h1, h2, h3, h4, h5, h6 {
 * {
     box-sizing: border-box;
 }
+
+
+.homepage-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes list items appear in a row */
+    gap: 10px; /* Adds space between list items */
+}
+.homepage-list li {
+    display: inline;
+}
+.homepage-list a {
+    text-decoration: none; /* Removes underline */
+    color: #000; /* Sets text color, adjust as needed */
+}
