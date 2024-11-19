@@ -47,34 +47,30 @@ footer {
     font-size: .8em;
 }
 
-nav {
-    margin: 1rem 0;
-}
-
-nav ul {
+.main-nav ul {
     display: flex;
-    gap: 20px;
+    flex-direction: row;  /* explicitly set to row */
+    list-style-type: none;  /* removes bullets */
     padding: 0;
     margin: 0;
-    list-style: none;
-    align-items: center;
+    gap: 20px;
 }
 
-nav ul li {
+.main-nav li {
     margin: 0;
+    padding: 0;
 }
 
-nav ul li a {
-    color: inherit;
+.main-nav a {
     text-decoration: none;
-    padding: 5px 0;
+    color: inherit;
 }
 
-nav ul li a:hover {
+.main-nav a:hover {
     text-decoration: underline;
 }
 
-/* nav ul, footer ul {
+nav ul, footer ul {
     display: flex;
     gap: 20px;
     padding: 0px;
@@ -83,8 +79,8 @@ nav ul li a:hover {
 }
 nav ul li, footer ul li {
     /* display: inline; */
-    /* margin-right: 0px; */
-/* } */ 
+    margin-right: 0px;
+}
 
 .main-container {
     max-width: 940px;
