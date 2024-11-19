@@ -47,31 +47,23 @@ footer {
     font-size: .8em;
 }
 
-.main-nav ul {
+header nav ul {
     display: flex;
-    flex-direction: row;  /* explicitly set to row */
-    list-style-type: none;  /* removes bullets */
+    flex-direction: row;
+    list-style-type: none;
     padding: 0;
     margin: 0;
     gap: 20px;
 }
 
-.main-nav li {
+header nav li {
     margin: 0;
     padding: 0;
 }
 
-.main-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
-}
-
 nav ul, footer ul {
     display: flex;
+    flex-direction: row;
     gap: 20px;
     padding: 0px;
     list-style: none;
