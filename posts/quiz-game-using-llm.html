@@ -1,190 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8" />
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A blog by sumeet">
-        <meta name="author" content="Sumeet Badana">
-        <link rel="stylesheet" href="https://summii.github.io/style.css"/>
-        <link rel="icon" href="https://summii.github.io/favicon.ico">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Quiz App with Python and Ollama Mistral</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f9;
+            border-left: 4px solid #333;
+            color: #444;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #c7254e;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Building a Quiz App with Python and Ollama Mistral</h1>
+        <p>
+            In this blog, I’ll guide you through building a quiz application designed to help children study through engaging trivia. 
+            The app will use <strong>Ollama Mistral</strong> as the language model to generate quiz questions. 
+            This project is self-funded and aims to make learning both fun and intuitive for children.
+        </p>
 
-    <title>sumeet&#x27;s blog &middot; A blog by sumeet bhadana</title>
-    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://summii.github.io/feed.xml">
+        <h2>Case Study</h2>
+        <p>
+            My nephew enjoys quiz games and often asks me to play with him. He wants questions in categories such as general knowledge or current affairs 
+            (history, geography, arts, sports), but manually preparing questions and verifying answers online is tedious.
+        </p>
+        <p>
+            To simplify this, I decided to create a quiz application that he can use independently. Here are the key goals for this app:
+        </p>
+        <ul>
+            <li>The app should be <strong>extremely easy to use</strong>.</li>
+            <li>The responses should be <strong>self-explanatory</strong> for children to navigate.</li>
+        </ul>
 
-    <style>html,body{background:#f0f2fd;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:blue;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}blockquote{border-left:10px solid grey;padding:0.25rem 0.5rem;margin-left:0;font-style:italic}p code,li code{background-color:#f5f5f5;white-space:pre-wrap;padding:5px;border-radius:5px;font-size:0.85rem;box-shadow:0 1px 3px rgba(0,0,0,0.1),0 1px 1px rgba(0,0,0,0.1),0 2px 1px -1px rgba(0,0,0,0.12)}@media (max-width: 38rem){.homepage-list li a{width:100%}}
-</style>
+        <h2>Tech Stack</h2>
+        <p>
+            For this project, I’ll primarily use:
+        </p>
+        <ul>
+            <li>Python</li>
+            <li>Ollama Mistral for language model integration</li>
+            <li>Rich Library for terminal-based UI testing</li>
+            <li>Pydantic for data validation</li>
+        </ul>
+        <p>In the second phase, I plan to build the UI using <code>Flask</code> or <code>FastHTML</code>.</p>
 
-    <meta property="og:site_name" content="sumeet&#x27;s blog">
-      <meta name="author" content="Sumeet Bhadana" />
-      <meta property="og:title" content="sumeet&#x27;s blog">
-      <meta property="og:description" content="A blog by sumeet">
-      <meta property="og:url" content="https://summii.github.io/">
-      <meta property="og:image" content="">
-
-      
-
-      
-      
+        <h2>Step 1: Generating Quiz Questions</h2>
+        <p>
+            To generate trivia questions, we will prompt the language model for a specific category. The questions will relate to <strong>India</strong> to make the context relevant and engaging. 
+            Below is the function for generating questions:
+        </p>
+        <pre><code>def generate_question(self, category):
+    """Generate a question for the given category using Ollama"""
+    prompt = f"""Generate a {category} trivia question related to India. 
+    Respond with only the question on one line, followed by the answer on the next line.
+    Make it challenging and interesting."""
     
-
-  </head>
-  
-
-  <body>
-    <main id="main" role="main">
-
-      
-      <header role="banner">
-        <h3 style="margin-top:0;">
-          <a href="https://summii.github.io/" title="Home">sumeet&#x27;s blog</a>
-          <br /><small>A blog by sumeet</small>
-        </h3>
-      </header>
-      <hr />
-      
-
-      
-<article>
-  <h1>Quiz Game using a LLM</h1>
-
-  
-    <p style="font-size:90%;">Posted on <time datetime="2022-03-08T00:00:00+00:00">March 08, 2022</time></p>
-  
-
-  <p>I wanted to try out <a href="https://docs.astral.sh/uv/"> uv </a> for long time now. For those who don't know about <code>uv</code>, it is a python packaging tool.</a></p>
-<p>I am reading about LLM's nowadays and i thought of combining both to work on a project over weekend </p>
-<p><a href="https://www.monkeyuser.com/2019/bug-free/"><img src="https://www.monkeyuser.com/assets/images/2019/131-bug-free.png" alt="&quot;Bug Free&quot; comic at monkeyuser.com" /></a></p>
-<p>After all, hello world programs only do one thing. How could there be a bug?</p>
-<h2 id="hello-world-in-c">Hello world in C</h2>
-<p>There are a lot of different ways to write hello world in C. There's
-the <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program#C">Wikipedia version</a>, <a href="https://riptutorial.com/c/example/3675/original--hello--world---in-k-r-c">the hello world in the K&amp;R book</a>, and there's
-even <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program#History">the oldest known C hello world program from 1974</a>.</p>
-<p><a title="Brian Kernighan, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Hello_World_Brian_Kernighan_1978.jpg"><img width="512" alt="Hello World Brian Kernighan 1978" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hello_World_Brian_Kernighan_1978.jpg/512px-Hello_World_Brian_Kernighan_1978.jpg"></a></p>
-<p>Here's another, this one <a href="http://helloworldcollection.de/#C%C2%A0(ANSI)">in &quot;ANSI C&quot;</a>:</p>
-<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#65737e;">/* Hello World in C, Ansi-style */
-</span><span>
-</span><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">stdio.h</span><span>&gt;
-</span><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">stdlib.h</span><span>&gt;
-</span><span>
-</span><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">main</span><span>(</span><span style="color:#b48ead;">void</span><span>)
-</span><span>{
-</span><span>  </span><span style="color:#96b5b4;">puts</span><span>(&quot;</span><span style="color:#a3be8c;">Hello World!</span><span>&quot;);
-</span><span>  </span><span style="color:#b48ead;">return</span><span> EXIT_SUCCESS;
-</span><span>}
-</span></code></pre>
-<p>This is the most careful version of the bunch. It uses <code>(void)</code> to ensure that
-<code>main</code> is a new-style declaration. It uses the <code>EXIT_SUCCESS</code> macro instead
-of just assuming that the platform uses 0 to indicate success, which isn't
-necessary, according to the C standard, but we're not taking any chances here.
-And it uses the appropriate headers to avoid implicitly declaring <code>puts</code>. This
-version attempts to do <em>everything</em> right.</p>
-<p>And yet, it still has a bug.</p>
-<p>All the versions linked above have a bug.</p>
-<h2 id="a-bug">A bug?</h2>
-<p>Linux has this fun device file called &quot;/dev/full&quot;, which is like its more
-famous cousin &quot;/dev/null&quot;, but when you write to &quot;/dev/full&quot;, instead of
-throwing away the data, it fails. It acts like a file on a filesystem that
-has just run out of space:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> echo &quot;</span><span style="color:#a3be8c;">Hello World!</span><span>&quot; &gt; /dev/full
-</span><span style="color:#bf616a;">bash:</span><span> echo: write error: No space left on device
-</span><span style="color:#bf616a;">$</span><span> echo $</span><span style="color:#bf616a;">?
-</span><span style="color:#bf616a;">1
-</span></code></pre>
-<p>This is a great little tool for testing that programs handle I/O errors
-correctly. It's inconvenient to create actual filesystems with no
-space left, or disks that actually fail, but it's really easy to ask a
-program to write its output to &quot;/dev/full&quot; and see what happens.</p>
-<p>So let's test the C example above:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> gcc hello.c</span><span style="color:#bf616a;"> -o</span><span> hello
-</span><span style="color:#bf616a;">$</span><span> ./hello &gt; /dev/full
-</span><span style="color:#bf616a;">$</span><span> echo $</span><span style="color:#bf616a;">?
-</span><span style="color:#bf616a;">0
-</span></code></pre>
-<p>Unlike when we used <code>echo</code> in the shell above, here, we got no output, and
-the exit status was zero. That means the <code>hello</code> program reported successful
-execution. However, it didn't actually succeed. We can confirm that it
-encounters a failure using <a href="https://man7.org/linux/man-pages/man1/strace.1.html">strace</a>:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> strace</span><span style="color:#bf616a;"> -etrace</span><span>=write ./hello &gt; /dev/full
-</span><span style="color:#bf616a;">write</span><span>(1, &quot;</span><span style="color:#a3be8c;">Hello World!\n</span><span>&quot;, 13)          = </span><span style="color:#bf616a;">-1</span><span> ENOSPC (No space left on device)
-</span><span style="color:#bf616a;">+++</span><span> exited with 0 +++
-</span></code></pre>
-<p>There's our &quot;No space&quot; error getting reported by the OS, but no matter,
-the program silently swallows it and returns 0, the code for success. That's
-a bug!</p>
-<p>How severe is this bug? Arguably, hello world isn't going to be safety-critical
-anywhere. However, hello world does do something that programs in the real
-world do: print to standard output, which might be redirected to a file. And
-files in the real world can run out of space. If a program doesn't detect this
-kind of error and report it through its return code, its parent process won't
-know that the child failed, and will continue running as if nothing was wrong,
-even though the output it expected to have been produced has silently lost data.</p>
-<p>For example, consider a program that prints a <a href="https://yaml.org/">yaml</a> file to standard output.
-If standard output runs out of space, the output may be truncated at some
-arbitrary point, though it <a href="https://www.sqlservercentral.com/editorials/do-you-have-all-the-yaml">may still be valid yaml</a>. So we should expect
-programs to detect and report this kind of situation.</p>
-<h2 id="what-about-other-languages">What about other languages?</h2>
-<p>We looked at bash and C above; what about Python, which tells us that
-<a href="https://www.python.org/dev/peps/pep-0020/#id2">&quot;Errors should never pass silently&quot;</a>? Here's Python 2:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> python2 hello.py &gt; /dev/full
-</span><span style="color:#bf616a;">close</span><span> failed in file object destructor:
-</span><span style="color:#bf616a;">sys.excepthook</span><span> is missing
-</span><span style="color:#bf616a;">lost</span><span> sys.stderr
-</span><span style="color:#bf616a;">$</span><span> echo $</span><span style="color:#bf616a;">?
-</span><span style="color:#bf616a;">0
-</span></code></pre>
-<p>It did print a message to stderr, though it's a confusing message. However, it
-also returned 0, which means it's telling whoever ran it that it exited
-succeesfully.</p>
-<p>Fortunately, Python 3 properly reports the error, and prints a nicer
-error message too:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> python3 hello.py &gt; /dev/full
-</span><span style="color:#bf616a;">Exception</span><span> ignored in: &lt;_io.TextIOWrapper name=&#39;</span><span style="color:#a3be8c;">&lt;stdout&gt;</span><span>&#39; mode=&#39;</span><span style="color:#a3be8c;">w</span><span>&#39; encoding=&#39;</span><span style="color:#a3be8c;">utf-8</span><span>&#39;&gt;
-</span><span style="color:#bf616a;">OSError: </span><span style="color:#b48ead;">[</span><span>Errno 28</span><span style="color:#b48ead;">]</span><span> No space left on device
-</span><span style="color:#bf616a;">$</span><span> echo $</span><span style="color:#bf616a;">?
-</span><span style="color:#bf616a;">120
-</span></code></pre>
-<p>Using hello world programs from common tutorial sites in a few languages that
-I happened to try, here are the results:</p>
-<table><thead><tr><th>Language</th><th align="center">Has the bug</th><th>Versions tested</th></tr></thead><tbody>
-<tr><td>C</td><td align="center">Yes</td><td>(all)</td></tr>
-<tr><td>C++</td><td align="center">Yes</td><td>(all)</td></tr>
-<tr><td>Python 2</td><td align="center">Yes</td><td><code>Python 2.7.18</code></td></tr>
-<tr><td>Ruby</td><td align="center">Yes</td><td><code>ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux-gnu]</code></td></tr>
-<tr><td>Java</td><td align="center">Yes</td><td><code>openjdk 11.0.11 2021-04-20</code></td></tr>
-<tr><td>Node.js</td><td align="center">Yes</td><td><code>v12.21.0</code></td></tr>
-<tr><td>Haskell</td><td align="center">Yes</td><td><code>The Glorious Glasgow Haskell Compilation System, version 8.8.4</code></td></tr>
-<tr><td></td><td align="center"></td><td></td></tr>
-<tr><td>Rust</td><td align="center">No</td><td><code>rustc 1.59.0 (9d1b2106e 2022-02-23)</code></td></tr>
-<tr><td>Python 3</td><td align="center">No</td><td><code>Python 3.9.5</code></td></tr>
-<tr><td>Perl</td><td align="center">No</td><td><code>perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-gnu-thread-multi (with 46 registered patches...)</code></td></tr>
-<tr><td>Perl 6</td><td align="center">No</td><td><code>v2020.12</code></td></tr>
-<tr><td>Bash</td><td align="center">No</td><td><code>GNU bash, version 5.1.4(1)-release (x86_64-pc-linux-gnu)</code></td></tr>
-<tr><td>Awk</td><td align="center">No</td><td><code>GNU Awk 5.1.0, API: 3.0 (GNU MPFR 4.1.0, GNU MP 6.2.1)</code></td></tr>
-<tr><td>OCaml</td><td align="center">No</td><td><code>4.08.1</code></td></tr>
-<tr><td>Tcl</td><td align="center">No</td><td><code>8.6.11</code></td></tr>
-<tr><td>C#</td><td align="center">No</td><td><code>Mono JIT compiler version 6.8.0.105</code></td></tr>
-</tbody></table>
-
-</article>
-
-
-      
-      <footer role="contentinfo">
-        <hr />
+    print(prompt)
+    try:
+        response = requests.post('http://localhost:11434/api/generate',
+                                 json={
+                                     "model": "mistral",
+                                     "prompt": prompt,
+                                     "stream": False
+                                 })
+        response.raise_for_status()
+        result = response.json()
         
-        <nav style="margin-bottom:1rem;" role="navigation">
-            
-          
-        </nav>
-        
-      </footer>
-      
+        # Split the response into question and answer
+        lines = result['response'].strip().split('\n')
+        if len(lines) >= 2:
+            question = lines[0].strip()
+            answer = lines[1].strip().lower().replace('answer:', '').strip()
+            return {"question": question, "answer": answer}
+    except Exception as e:
+        print(f"Error generating question: {e}")
+        return None</code></pre>
 
-    </main>
+        <h2>Step 2: Checking Answers</h2>
+        <p>
+            To ensure children can get immediate feedback on their answers, I implemented a robust answer-matching logic using Python's 
+            <code>SequenceMatcher</code>. This approach handles variations in spelling and phrasing.
+        </p>
+        <pre><code>def check_answer(self, user_answer, correct_answer):
+    """Check the user's answer against the correct answer using robust matching"""
+    player_answer = user_answer.lower().strip()
+    correct_answer = correct_answer.lower().strip()
+
+    # Direct match
+    if player_answer == correct_answer:
+        return True
+
+    # Check similarity
+    similarity = SequenceMatcher(None, player_answer, correct_answer).ratio()
+    if similarity >= 0.8:
+        return True
+
+    # Check if the answer is a more specific version
+    player_words = player_answer.split()
+    correct_words = correct_answer.split()
+    important_words = {word for word in correct_words if len(word) > 3}
     
-    
-  </body>
+    return important_words.issubset(player_words)</code></pre>
+
+        <h2>Testing the Application</h2>
+        <p>
+            For terminal-based testing, I will use Python's <strong>Rich</strong> library. It helps create a visually appealing CLI for the quiz app.
+        </p>
+        <p>In the next blog, I will demonstrate how to build a simple UI using Flask/FastHTML.</p>
+
+        <h2>Conclusion</h2>
+        <p>
+            By combining the power of Python and Ollama Mistral, this quiz app can turn study time into an enjoyable and interactive experience for children. 
+            Stay tuned for the next part where we’ll add a user-friendly interface!
+        </p>
+    </div>
+</body>
 </html>
