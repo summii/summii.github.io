@@ -1,61 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building a Quiz App with Python and Ollama Mistral</title>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A blog by Sumeet">
+    <meta name="author" content="Sumeet Bhadana">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="icon" href="https://summii.github.io/favicon.ico">
+
+    <title>Sumeet&#x27;s Blog &middot; Building a Quiz App</title>
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://summii.github.io/feed.xml">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+        html, body {
+            background: #f0f2fd;
+            color: #2d2d2d;
+            font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        pre {
-            background: #f4f4f9;
-            border-left: 4px solid #333;
-            color: #444;
-            padding: 10px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: monospace;
-            color: #c7254e;
-        }
-        a {
-            color: #007bff;
+        a, a:visited {
+            color: blue;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
+        main {
+            margin: auto;
+            max-width: 38rem;
+            padding: 0.8rem;
+        }
+        pre {
+            background: white;
+            overflow: scroll;
+            padding: 1rem;
+        }
+        td {
+            border: 1px solid #2d2d2d;
+            padding: 10px;
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+        .homepage-list {
+            list-style: none;
+            padding: 1rem 0;
+        }
+        .homepage-list li {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        blockquote {
+            border-left: 10px solid grey;
+            padding: 0.25rem 0.5rem;
+            margin-left: 0;
+            font-style: italic;
+        }
+        p code, li code {
+            background-color: #f5f5f5;
+            white-space: pre-wrap;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1), 0 2px 1px -1px rgba(0,0,0,0.12);
+        }
+        @media (max-width: 38rem) {
+            .homepage-list li a {
+                width: 100%;
+            }
         }
     </style>
+
+    <meta property="og:site_name" content="Sumeet&#x27;s Blog">
+    <meta property="og:title" content="Sumeet&#x27;s Blog">
+    <meta property="og:description" content="A blog by Sumeet">
+    <meta property="og:url" content="https://summii.github.io/">
+    <meta property="og:image" content="">
 </head>
 <body>
-    <div class="container">
-        <h1>Building a Quiz App with Python and Ollama Mistral</h1>
-        <p>
-            In this blog, I’ll guide you through building a quiz application designed to help children study through engaging trivia. 
-            The app will use <strong>Ollama Mistral</strong> as the language model to generate quiz questions. 
-            This project is self-funded and aims to make learning both fun and intuitive for children.
-        </p>
+    <main id="main" role="main">
+        <header role="banner">
+            <h3 style="margin-top: 0;">
+                <a href="https://summii.github.io/" title="Home">Sumeet&#x27;s Blog</a>
+            </h3>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="https://summii.github.io/" title="Home">Home</a></li>
+                    <li><a href="https://summii.github.io/resume" title="Resume">Resume</a></li>
+                    <li><a href="https://summii.github.io/about" title="About">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr />
+
+        <article>
+            <h1>Building a Quiz App with Python and Ollama Mistral</h1>
+            <p>
+                This blog demonstrates how to build a quiz app for children using Python and Ollama Mistral, with a focus on simplicity and usability. 
+                Let’s dive into the details!
+            </p>
 
         <h2>Case Study</h2>
         <p>
@@ -150,7 +197,9 @@
         <p>
             By combining the power of Python and Ollama Mistral, this quiz app can turn study time into an enjoyable and interactive experience for children. 
             Stay tuned for the next part where we’ll add a user-friendly interface!
+            You can take a look at the source code on <a href="https://github.com/summii/quizzie">GitHub</a>.
         </p>
+        <a href="https://summii.github.io/" title="Back to Home">← Back to Home</a>
     </div>
 </body>
 </html>
